@@ -2,19 +2,56 @@
 <html lang="en-US">
 
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
 <link rel="shortcut icon" type="image/png" href="https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-22/c93d11bd8d07ea09e3e312f0326c0807.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hvað á ég að gera?</title>
 <style>
 body {background-color: #f5eee1;}
-h1   {color: blue;}
+h1   {color: #111859;}
 p    {color: #2e2c4a; font-family: courier;
   font-size: 160%; border: 1px dashed #111859;
 padding: 30px;
 margin: 50px;
 }
 
+img { max-width: 100%; }
+
+p.new_font {
+     /*text-indent: 1.5em;*/
+     font: 14px Helvetica, Sans-Serif;
+     color: white;
+     overflow: hidden;
+     padding: 15px;
+     text-align: justify;
+     background: rgb(0, 0, 0,0.3); /* fallback color */
+     background: rgba(0, 0, 0, 0.7);
+} 
+
+p.auka {
+     /*text-indent: 1.5em;*/
+     font: 14px Helvetica, Sans-Serif;
+     color: #111859;
+     overflow: hidden;
+     padding: 15px;
+     text-align: justify;
+     background: #f5eee1); /* fallback color */
+     background: #f5eee1);
+} 
+
+p.loka {
+     /*text-indent: 1.5em;*/
+     font: 10px courier;
+     color: #111859;
+     overflow: hidden;
+     padding: 10px;
+     text-align: center;
+border: 0px;
+    
+} 
 .button {
   border: none;
   color: white;
@@ -51,7 +88,32 @@ font-family: courier;
   color: white;
 }
 
-  
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+
+a {
+  color: white;
+}
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 </style>
 </head>
 
@@ -66,11 +128,153 @@ font-family: courier;
 <script>
 function GetValue()
 {
-    var myarray= new Array("Þrífa klósettið","Fara út í göngutúr","Taka til í fataskáp", "Baka", "Hringja í gamlan vin");
+    var myarray= new Array("Þrífa klósettið","Fara út í göngutúr","Taka til í fataskáp","Eldaðu eitthvað nýtt","Hugleiddu","Farðu í kalda sturtu","Rifjaðu upp gömul áhugamál","Lagaðu eitthvað sem þarf að laga","Rifjaðu upp eða lærðu nýtt tungumál","Settu markmið fyrir næsta dag","Lestu fræðandi grein á netinu","Lestu","Taktu til","skrifaðu niður lista yfir ókláruð verk","Þrífðu í 30 mínútur","Hittu vin","Þrífðu eitthvað sem þú hefur ekki þrifið lengi","Farðu í göngutúr","Skrifaðu þakklætisbréf","Skrifaðu niður 5 hluti sem þú ert þakklát/ur fyrir", "Gerðu armbeygjur eða aðra líkamsþyngdaræfingu", "Hlustaðu á hlaðvarp", "Farðu í sund", "Farðu að hjóla", "Fáðu þér stórt vatnsglas", "Farðu í búð og smakkaðu nýtt grænmeti eða ávöxt", "Smakkaðu mat sem þér fannst vondur en þú hefur ekki smakkað lengi og sjáðu hvað þér finnst", "Farðu í nudd", "Rifjaðu upp góðar minningar", "Farðu á kaffihús", "Finndu eitthvað fyndið á netinu eða annað sem fær þig til að hlæja", "Stundaðu kynlíf sé þess kostur", "Farðu í bíó",
+"Farðu í stjörnuskoðun","Heitt bað eða heitur pottur","Fara að prjóna","Hlustaðu á tónlist","Farðu að teikna eða mála","Gerast túristi í eigin landi","Dansaðu","Föndra", "Hrósaðu einhverjum", "Garðvinna","Púsla","Skoðaðu gamlar myndir","Skrifaðu upp viðskiptahugmyndir","Taktu til í tölvunni","Skrifaðu ljóð eða smásögu","Farðu í fótabað","Taka ljósmyndir?","Heimsækja ættingja","Leika við dýr","Skrifaðu dagbók","Gleðja einhvern","Fara í leikhús","Fara á skauta","Horfðu á uppáhalds kvikmyndina þína","Gerðu þig fína/nn","Haltu veislu/matarboð","Knúsaðu","Skráðu þig á námskeið", "Farðu í Yoga", "Syngdu!", "Borðaðu uppáhalds matinn þinn sem barn", "Farðu með eitthvað sem þú ert hættur að nota í endurvinnslu", "Baka", "Gerðu góðverk", "Gerðu eitthvað sem krefst hugrekkis","Hringja í gamlan vin");
     var random = myarray[Math.floor(Math.random() * myarray.length)];
    document.getElementById("message").innerHTML=random;
 }
 </script>
-</body>
+<br>
+<br>
+<br>
+<center><button name="info" onclick="toggleDiv('element', this, 'Fela texta', 'Af hverju aukin virkni?')">Af hverju aukin virkni?</button>
+<br>
+<div align="center" id="element" style="display: none;"><br><p class="new_font">Ein forsenda heilsu er virkni. 
+Ef ekkert gerist, gerist ekkert. Hið umdeilda ljóðskáld, Charles Bukowski sagði:<br><br>
+<em>“Ég var að bíða eftir því að eitthvað stórkostlegt myndi gerast. En á meðan að árin flugu framhjá mér, þá gerðist ekkert, nema að ég lét það verða.”</em><br><br>
+<br>
+Við getum ekki alltaf beðið eftir því að lífið leiði okkur á einhvern stað. Langanir okkar, þarfir og draumar er afleiðing gjörða okkar. Ef maður gerir ekkert, gerist ekkert. En það þýðir vissulega samt ekki að við þurfum alltaf að vera virk. Stundum er gott að draga sig í hlé og njóta einveru og slökunar. Sitja í sófanum, hanga í símanum eða tölvunni, hámglápa á sjónvarp eða sofa aðeins meira. Þessi hegðun getur verið nauðsynleg til að berjast gegn streitu eða hvíla sig eftir annasaman tíma. En ef þessi hegðun er ríkjandi eða einkennandi í lífinu okkar þurfum við að fara að auka virknina.
+<br></p>
+<h1>En af hverju aukin virkni?</h1>
+<p class="new_font">
+Ein mikilvægasta ástæðan til að auka virkni er því hún er verndandi þáttur gegn þunglyndi. Rannsóknir hafa sýnt að aukin virkni bæti líðan og vinni gegn þunglyndi. Best er þá að virknin sé eitthvað sem hefur merkingu fyrir fólki. Ekki er nóg að fara í sund ef þér hefur alltaf þótt leiðinlegt í sundi. Til að bæta líðan þarf maður að prófa sig áfram. Sú virkni sem bætir líðan hjá einum þarf ekki að bæta líðan hjá öðrum. Því er ekki alltaf gagnlegt að segja þunglyndum einstaklingi að fara bara út í göngutúr.</p>
+<p class="new_font">Sú virkni sem getur bætt líðan skiptist gróflega í tvo flokka: 
+<br><br>(1) Þær athafnir sem veita vellíðan eins og til dæmis að hlusta á góða tónlist, fara í heitt bað eða láta nudda sig.
+<br><br>(2) Þær athafnir sem vekja upp afrekstilfinningu. Það er, allt sem við getum verið nokkuð stolt að hafa gert. Það eru athafnir eins og að þrífa, læra heima eða klára einhver verkefni sem eru búin að hanga yfir manni.<br><br> 
+Önnur ástæða til að auka virkni er staðreyndin að aukin virkni gerir mann orkumeiri. Það hljómar eins og þversögn að eyða orku til að fá orku en málið er að þegar maður er aðgerðarlaus lengi er eins og líkaminn fari á orkusparandi stillingu. Aðgerðarleysi gerir mann þreyttan og þreytan gerir mann aðgerðarlausan og þar af leiðandi getur aukin virkni komið í veg fyrir að þessi vítahringur myndast. 
+Eftir langan og erfiðan vinnudag getur vissulega verið einstaklega notalegt að fara í þægileg föt, hoppa í sófann og gleyma sér yfir sjónvarpinu eða týna sjálfum sér í upplýsingagnægð og grípandi afþreyingu í símanum eða spjaldtölvunni. Slík athöfn eða annað sambærilegt getur virkað sem einstaklega styrkjandi þáttur í vítahring sem við köllum leti, iðjuleysi, framtaksleysi eða sinnuleysi. Þegar við erum þreytt eða úrvinda vill líkaminn okkar hvíld. Það er eðlilegt. Þessi hvíld er svo þægileg að eðlilegt er að hegðunin styrkist og þreytan eykst ef við erum á sjálfsstýringu. En gróflega má skipta þreytu upp í fjóra mismunandi flokka. 
 
+<br>
+<br>
+<em><strong>1.</strong> Þreyta sem kemur til vegna svefnleysis<br><br>
+ <strong> 2.</strong> Þreyta sem kemur til vegna of mikillar orkunotkunnar líkamans<br><br>
+ <strong> 3.</strong> Þreyta sem kemur til vegna mæðu eða sljóleika (til dæmis eftir einhæfa vinnu eða verkefnasetu í langan tíma)<br><br>
+<strong> 4.</strong> Þreyta vegna aðgerðarleysis</em>	
+</p>
+<p class="new_font">
+Oftast upplifum við einhverskonar blöndu af þessum fjórum flokkum en sama hvaða tegund þreytu eru orsökin þá upplifum við ýmis líkamleg einkenni þreytu sem við túlkum bæði meðvitað og ómeðvitað sem þörf á hvíld. En það er ekki alltaf raunin að við þurfum hvíld, þó það eigi stundum við. En til að greina á milli er mikilvægt að vera gagnrýninn á eigin upplifanir. Spyrja sig hvaða áhrif ákveðin viðbrögð hafa. Hvaða áhrif hefur það á líðan mína að fara upp í sófa? En til lengri tíma? Mun ég raunverulega endurheimta orku ef ég fer og glápi á sjónvarpið? Er líklegra að ég nenni að setja í þvottavél á eftir ef ég leggst í sófann núna? Eða er líklegra að það sé betra að gera það fyrst og síðan fara í sófann? Spurningarnar eru óteljandi og einstaklingsbundnar en það skiptir máli er að bregðast ekki við á sjálfsstýringu heldur reyna að þjálfa upp gagnlegri hugsun sem leiðir ekki til vítahringja. 
+<br><br>
+Tökum dæmi um einn slíkan vítahring:
+</p>
+<p class="auka">
+Siggi kemur heim úr vinnunni á föstudegi eftir mjög erfiða viku. Hann hugsar “Þetta var rosaleg vika, ég á nú skilið að slappa aðeins af”. Hann sest í sófann og horfir á nokkra þætti í sjónvarpinu. Áður en hann veit af er klukkan orðinn sex og hann þarf að ákveða hvað er í matinn. Hann stendur upp og fattar að hann er orðinn mjög svangur. Hann er ennþá slakur og nokkuð sljór eftir langa setu og ákveður að panta sér pizzu. Á meðan hann bíður fær hann sér nokkur kex. Einföldu kolvetnin gera hann ennþá þreyttari. Hann fer aftur í sófann og bíður eftir pizzunni. Þegar pizzan kemur borðar hann fyrir framan sjónvarpið því hann var dottinn í nýja þáttaröð. Allt í einu er klukkan orðinn margt og hann reynir að fara að sofa. Hann byrjar að hugsa um hvað hann gerði lítið í dag. Hann skammast í sjálfum sér fyrir að hafa ekki gengið fram og tekið smá til. Hann man líka að hann ætlaði að fara á pósthúsið sem hann gleymdi. Hann finnur smá depurð út af þessum hugsunum og finnst hann vera letingi. Daginn eftir vaknar hann því í óþægilegu skapi. Hann er þungur á sér og finnst allt í einu svo mikið að gera. Hann tekur eftir því að hann er ennþá þreyttur og nennir því ekki strax frammúr rúminu. Hann fær frekari neikvæðar hugsanir um hvað hann er latur og verður fyrir vikið þyngri í skapinu og enn þreyttari. Hann eyðir stærsta hluta dagsins í rúminu og vítahringurinn heldur þannig áfram alla helgina. Á mánudeginum mætir hann illa upplagður í vinnuna og upplifir þar með aðra erfiða viku. Vítahringurinn styrkist!
+<br>
+<br>
+<img src="https://i.imgur.com/dUud3Ew.png" alt="Vítahringur" class="center">
+</p>
+<p class="new_font">
+Þó þetta dæmi sé nokkuð ýkt sjáum við hvað virkni er mikilvæg. Virkni er eins og sjálftrekktu úrin. Það eru úr sem ganga án rafhlöðu svo lengi sem það er einhver hreyfing á þeim. Sé úrið látið liggja of lengi þarf að stilla það upp á nýtt.  Í dæminu um Sigga hefði ein lítil breyting strax geta rofið vítahringinn. Ef hann hefði farið á pósthúsið strax eftir vinnu, gengið smá frá og boðið til dæmis vin í heimsókn hefði vítahringurinn kannski aldrei myndast. 
+</p>
+<h1>LEIÐIR TIL AÐ AUKA VIRKNI</h1>
+<h2>1. Setja markmið</h2>
+<p class="new_font">
+Til að auka líkur á að maður framkvæmi það sem þarf að gera, geta markmið hjálpað. Bæði skammtíma og langtíma markmið auka líkur á því að eitthvað verði framkvæmt. Hægt er að styðjast t.d. við <a href="https://is.wikipedia.org/wiki/SMART-reglan">SMART markmið.</a> Í lok hvers dags getur einnig verið gott að setja að minnsta kosti eitt einfalt markmið fyrir daginn eftir. Að kvöldi má til dæmis segja við sjálfan sig (eða skrifa niður): <em>Á morgun klukkan 16:00 ætla ég að fara með dósirnar í endurvinnslu.</em>
+</p>
+<h2>2. Fimm mínútna reglan</h2>
+<p class="new_font">
+Þessa reglu má sennilega rekja til bandaríska sálfræðings Christine Padesky. Reglan er stundum kölluð 10 mínútna reglan en þar er grundvallarhugmyndin þó sú sama. Í hvert skipti sem við nennum ekki að gera eitthvað ákveðið er gott að muna að oft nennum við einfaldlega ekki að byrja. En ef við náum að byrja er ekkert mál að fylgja verkinu eftir. Þess vegna getur verið gott að segja við sjálfan sig: <em>“Allt í lagi, ég skal gera þetta í 5 mínútur, ef ég hrekk ekki í gírinn má ég hætta án þess að fá samviskubit”</em>. 
+<br><br>Dæmi: Að moka innkeyrsluna sem er full af snjó. Maður klæðir sig í útiföt og reimar á sig skóna. Síðan stillir maður klukkuna á fimm mínútur og fer út og byrjar. Yfirleitt er maður nýbyrjaður þegar klukkan hringir. Þá er mjög líklegt að maður haldi áfram og jafnvel klári verkið. En ef maður klárar það ekki er það allt í lagi. Maður reyndi allavega og 5 mínútna verk er betra en ekkert. Maður prófar bara aftur síðar.
+</p>
+<h2>3. Skipulag</h2>
+<p class="new_font">
+Ef eitthvað er kerfisbundið og fyrirsjáanlegt er auðveldara að framkvæma það. Skipulögð virkni getur verið að skrifa niður í dagbók (til dæmis í símanum) stað og stund sem eitthvað fer fram. Í stað þess að segjast ætla með bílinn í dekkjaskipti í næstu viku er betra að skrifa niður: <em>Fara með bílinn á hjólbarðaverkstæði Dúdda klukkan 8 á þriðjudagsmorgninum fyrir vinnu</em>. Eins er hægt að ákveða í lok dags einhverja virkni daginn eftir: <em>Á morgun ætla ég út að hlaupa strax eftir vinnu.</em> Skipulögð virkni getur líka verið að hafa stundatöflu. Þá er hægt að prenta út autt vikuskipulag og seta til dæmis á ísskáp og skrá þar allt sem þarf að gera. 
+<br><br>
+Þá getur skipulag líka átt við þegar við stöndum frammi fyrir verkefni sem virðist óyfirstíganlegt. Þá getur verið gott að muna að gera bara eitt í einu og í réttri röð. Þannig getur verið gott að skrifa niður skrefin. Ef markmiðið er til dæmis að þrífa íbúðina eftir veislu er gott að skrifa, sem dæmi, niður:<br>
+<br>1.	Opna alla glugga
+<br>2.	Taka allt sem þarf að vaska upp og setja hjá vaski
+<br>3.	Setja allt rusl í ruslapoka
+<br>4.	Setja dósir í endurvinnslupoka
+<br>5.	Ganga frá öllum hlutum á sinn stað
+<br>6.	Þurrka af öllu
+<br>7.	Vaska upp
+<br>8.	Klára að þurrka af
+<br>9.	Þrífa klósett
+<br>10.	Þrífa baðvask
+<br>11.	Ryksuga
+<br>12.	Skúra
+<br><br>
+Svona virðist þetta viðráðanlegra en að hugsa aðeins <em>“þrífa eftir veislu”</em>. Eins er gott að muna að hálfnað verk þá hafið er. Þannig er best að byrja á því sem er mest aðgengilegt. Það að opna glugga til að fá frískt loft er mjög auðvelt og aðgengilegt en á sama tíma setur það tóninn, <em>“ég er byrjaður”</em>.
+<br>
+Ef mörg verkefni eru hangandi yfir manni getur hjálpað að skrifa þau upp og flokka út frá <a href="https://www.eisenhower.me/eisenhower-matrix/">Eisenhower boxi</a>.
+</p>
+<h2>4. Grípa og endurmeta hamlandi hugsanir</h2>
+<p class="new_font">
+
+Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstitute.org/get-informed/what-is-cognitive-therapy/">hugræn atferlismeðferð</a> byggir á og eins í <a href="https://en.wikipedia.org/wiki/Stoicism">stóuspeki</a> er að hugsanir okkar stýra viðbrögðum okkar. Ef við viljum breyta viðbrögðum þurfum við fyrst að breyta hugsunum. Því er gott að spyrja sig hvaða hugsanir eru að hamla virkni.
+<br><br>
+</p>
+<table>
+  <tr>
+    <th>Hamlandi hugsun</th>
+    <th>Endurmat</th>
+  </tr>
+  <tr>
+    <td><em>"Ég nenni þessu ekki"</em></td>
+    <td>Oft nennum við ekki að gera hluti en þurfum þess. Ímyndaðu þér hversu vel þér mun líða þegar þú ert búinn að þessu. Þú getur jafnvel verðlaunað þér með einhverjum hætti fyrir að nenna þessu.</td>
+  </tr>
+  <tr>
+    <td><em>"Ég er ekki í réttu skapi"</em></td>
+    <td>Það er ekki til skap fyrir allar athafnir. Skap og áhugi vaknar stundum <strong>eftir</strong> að maður fer í verkið. Stundum er maður t.d. ekki í skapi til að hitta vini sína en þegar maður lætur sig hafa það er maður ánægður að hafa drifið sig í það.</td>
+  </tr>
+  <tr>
+    <td><em>"Ég kann þetta ekki"</em></td>
+    <td>Það er ekki afsökun til að sleppa því. Getur þú fundið leiðbeiningar eða beðið einhvern um að hjálpa þér?</td>
+  </tr>
+  <tr>
+    <td><em>"Þetta tekur of langan tíma"</em></td>
+    <td>Þá er gott að skipuleggja sig. Ef þú ert tímabundinn er gott að brjóta verkefnið upp í smærri verk og gera fyrsta hlutann ekki seinna en strax.</td>
+  </tr>
+  <tr>
+    <td><em>"Þetta er óþarfi"</em></td>
+    <td>Stundum finnst okkur eins og að ákveðin verk séu óþörf en ef þau eru skoðuð betur kemur í ljós að það var mikil þörf á þeim. Kannski er þörfin ekki fyrir okkur sjálf heldur einhvern annan. Dæmi um slíkt væri að fara með pappír í endurvinnslu.</td>
+  </tr>
+  <tr>
+    <td><em>"Þetta er of mikið fyrir mig eða of erfitt"</em></td>
+    <td>Reyndu að fá aðstoð ef verkið er raunverulega of mikið. Eins er gott að spyrja sig með gagnrýnum hætti hvort verkið sé raunverulega of mikið. Sumum finnst kannski of mikið verk að taka til í yfirfullri geymslu en þegar ráðist er á verkið var það auðveldara en talið var í upphafi.</td>
+  </tr>
+<tr>
+    <td><em>"Þetta er tilgangslaust"</em></td>
+    <td>Ef þetta er verk sem t.d. makinn þinn eða samstarfsfélagi á að gera. Ræddu þá við hann. Ef það myndi gleðja einhvern að þú gerir verkið fyrir hann, láttu þá verða að því að gera þetta fyrir hann. Skoðaðu líka með gagnrýnum hætti hvort þetta sé raunverulega verk einhvers annars.</td>
+ </tr>
+<tr>
+    <td><em>"Einhver annar á að gera þetta fyrir mig"</em></td>
+    <td>Sumum finnst tilgangslaust að þrífa heima hjá sér því það verður strax aftur skítugt. En þegar þessi hugsun er skoðuð betur kemur í ljós að kostir þess að þrífa eru fleiri en gallarnir. Reyndu að skrifa niður þá kosti sem þú telur að fylgi því að klára verkið sem þér finnst tilgangslaust.</td>
+  </tr>
+  <tr>
+    <td><em>"Ég ætti að eyða tímanum í eitthvað annað"</em></td>
+    <td>Stundum er þetta rétt. En þá er mikilvægt að vera heiðarlegur og <strong>gera</strong><em> “þetta eitthvað annað.”</em> Ef þú ert að nota þetta sem afsökun til að liggja í vanvirkni, taktu þá stökkið án frekari umhugsunar og drífðu verkið af.</td>
+  </tr>
+</table>
+
+<p class="new_font">
+Þannig að, virkni er allt sem við komum í verk. Sama hvort það er smátt eða stórt þá er öll virkni betri en engin. Við virkum aðeins ef við erum virk. Ef við blöndum saman forvitni og elju og framkvæmum stöðugar virknitilraunir mun lífið að öllum líkindum leiða okkur í ótrúlegustu áttir. 
+</p>
+</div></center>
+
+<script>
+function toggleDiv(elementId, button, textOn, textOff) {
+  var style = document.getElementById(elementId).style;
+  if( style.display == "none" ) {
+    style.display = "block";
+    button.innerHTML = textOn;
+  } else {
+    style.display = "none";
+    button.innerHTML = textOff;
+  }
+}
+</script>
+
+</body>
+<br><br><br><br>
+<footer><p class="loka">Vefsíða þessi er fyrst og fremst gerð til að veita fólki hugmyndir um virkni. Vefsíðan er ekki hugsuð sem sjálfshjálparefni í stað sálfræðiþjónustu og er fólki sem grunar slíkan vanda bent á að hafa samband við t.d. heilsugæsluna sína.<br> <strong>www.ottar.is<br>©2020</strong></p></footer>
 </html>

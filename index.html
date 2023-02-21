@@ -273,7 +273,27 @@ function toggleDiv(elementId, button, textOn, textOff) {
   }
 }
 </script>
+<br>
+<br>
+    <center><button name="info" onclick="toggleDiv('element', this, 'Fela próf', 'Þunglyndispróf?')">Taktu þunglyndispróf?</button>
+<br>
+<iframe height="400" width="100%" frameborder="no" src="https://datasciencegenie.shinyapps.io/MyShinyApp/"> </iframe>
+</div></center>
 
+    
+
+<script>
+function toggleDiv(elementId, button, textOn, textOff) {
+  var style = document.getElementById(elementId).style;
+  if( style.display == "none" ) {
+    style.display = "block";
+    button.innerHTML = textOn;
+  } else {
+    style.display = "none";
+    button.innerHTML = textOff;
+  }
+}
+</script>
 </body>
 <br><br><br><br>
 <footer><p class="loka">Vefsíða þessi er fyrst og fremst gerð til að veita fólki hugmyndir um virkni. Vefsíðan er ekki hugsuð sem sjálfshjálparefni í stað sálfræðiþjónustu og er fólki sem grunar slíkan vanda bent á að hafa samband við t.d. heilsugæsluna sína.<br> <strong>www.ottar.is<br>©2020</strong></p></footer>

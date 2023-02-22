@@ -296,8 +296,19 @@ iframe.onload = function() {
     style.display = "none";
     button.innerHTML = textOff;
     iframe.style.height = "0px";
-  }
+   }
 }
+
+function iframeLoaded(iframe) {
+  iframe.contentWindow.postMessage({ type: "getHeight" }, "*");
+}
+
+window.addEventListener("message", function(event) {
+  if (event.data.type === "setHeight") {
+    var iframe = document.getElementById(elementId);
+    iframe.style.height = event.data.height + "px";
+  }
+});
 </script>
 
 </body>

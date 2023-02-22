@@ -288,9 +288,9 @@ function toggleDiv(elementId, button, textOn, textOff) {
   if (style.display == "none") {
     style.display = "block";
     button.innerHTML = textOn;
-  iframe.onload = function() {
-      var height = iframe.contentWindow.document.body.scrollHeight + "px";
-      iframe.style.height = height;
+iframe.onload = function() {
+      var height = iframe.contentWindow.document.documentElement.scrollHeight;
+      iframe.style.height = height + "px";
     };
   } else {
     style.display = "none";

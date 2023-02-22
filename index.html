@@ -277,7 +277,7 @@ function toggleDiv(elementId, button, textOn, textOff) {
 <br>
     <center>
   <div id="element2" style="display: none;">
-    <iframe height="100%" width="100%" marginwidth="0" marginheight="0" frameborder="0" src="https://ottarb.shinyapps.io/phqapp/"></iframe>
+    <iframe width="100%" frameborder="no" scrolling="no" src="https://ottarb.shinyapps.io/phqapp/"></iframe>
   </div>
   <button name="info" onclick="toggleDiv('element2', this, 'Fela próf', 'Þunglyndispróf')">Þunglyndispróf</button>
 </center>
@@ -288,9 +288,14 @@ function toggleDiv(elementId, button, textOn, textOff) {
   if (style.display == "none") {
     style.display = "block";
     button.innerHTML = textOn;
+  iframe.onload = function() {
+      var height = iframe.contentWindow.document.body.scrollHeight + "px";
+      iframe.style.height = height;
+    };
   } else {
     style.display = "none";
     button.innerHTML = textOff;
+    iframe.style.height = "0px";
   }
 }
 </script>

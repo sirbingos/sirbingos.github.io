@@ -5,151 +5,154 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
 <link rel="shortcut icon" type="image/png" href="https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-22/c93d11bd8d07ea09e3e312f0326c0807.ico"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hugmyndir um virkni</title>
+<style type="text/css">
 
-	<title>Hugmyndir um virkni</title>
-	<style type="text/css">
-		
-	header {
-			background-color: #a79066;
-			color: #4d5051;
-			padding: 10px;
-			position: fixed;
-			top: 0;
-			width: 100%;
-		}
-	
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}	
+
+.header-icon {
+  background-image: url('https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-22/c93d11bd8d07ea09e3e312f0326c0807.ico');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+header {
+		background-color: #6e9ea2;
+		color: #4d5051;
+		padding: 15px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	body {
+		font-family: Arial, sans-serif;
+		text-align: center;
+		position: relative;
+		min-height: 100vh;
+		max-height: 100vh;
+	}
+
 	footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background-color: #4d5051;
-  color: #fff;
-  text-align: center;
-  padding: 50px;
-  font-size: 12px;
-}
-body {
-			font-family: Arial, sans-serif;
-			text-align: center;
-padding-bottom: 80px;
-		}
+		position: relitive;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 70px;
+		background-color: #4d5051;
+		color: #fff;
+		text-align: center;
+		padding: 10px;
+		font-size: 12px;
+	}
 
-		h1 {
-			margin-top: 50px;
-		}
+	h1 {
+		font-family: 'Roboto', sans-serif;
+  font-weight: 300;	
+		margin-top: 20x;
+	}
 
-		button {
-			margin: 20px;
-			padding: 10px 20px;
-			background-color: #2596be;
-			color: white;
-			border: none;
-			border-radius: 8px;
-			font-size: 16px;
-			cursor: pointer;
-		}
-p.new_font {
-     /*text-indent: 1.5em;*/
-     font: 14px Helvetica, Sans-Serif;
-     color: #4d5051;
-     overflow: hidden;
-     padding: 15px;
-     text-align: justify;
-     background: rgb(214,209,192); /* fallback color */
-     background: rgba(214,209,192);
-} 
+	button {
+		margin: 20px;
+		padding: 10px 20px;
+		background-color: #2596be;
+		color: white;
+		border: none;
+		border-radius: 8px;
+		font-size: 16px;
+		cursor: pointer;
+	}
 
-p.auka {
-     /*text-indent: 1.5em;*/
-     font: 14px Helvetica, Sans-Serif;
-     color: #4d5051;
-     overflow: hidden;
-     padding: 15px;
-     text-align: justify;
-     background: #d6d1c0); /* fallback color */
-     background: #d6d1c0);
-} 
+	p.new_font {
+		font: 14px Helvetica, Sans-Serif;
+		color: #4d5051;
+		overflow: hidden;
+		padding: 20px 60px;
+		text-align: justify;
+		background: rgb(214, 209, 192); /* fallback color */
+		background: rgba(214, 209, 192);
+	}
 
-p.loka {
-     /*text-indent: 1.5em;*/
-     font: 10px courier;
-     color: #111859;
-     overflow: hidden;
-     padding: 10px;
-     text-align: center;
-border: 0px;
-    
-	header {
-			background-color: #4CAF50;
-			color: white;
-			padding: 10px;
-			position: fixed;
-			top: 20;
-			width: 100%;
-		}
-	
-		footer {
-			background-color: #2596be;
-			color: white;
-			padding: 20px;
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-		}
+	p.auka {
+		font: 14px Helvetica, Sans-Serif;
+		color: #4d5051;
+		overflow: hidden;
+		padding: 20px;
+		text-align: justify;
+		background: #d6d1c0; /* fallback color */
+		background: #d6d1c0;
+	}
 
+	p.loka {
+		font: 10px courier;
+		color: #111859;
+		overflow: hidden;
+		padding: 20px;
+		text-align: center;
+		border: 1px;
+	}
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    font-size: 20px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+	@media only screen and (max-width: 600px) {
+		/* adjust the layout for smaller screens */
+		body {
+			font-size: 14px;
+		}
 		#activity-container {
-			margin: 20px auto;
-			padding: 10px;
-			border: 1px solid #ccc;
-			border-radius: 8px;
-			max-width: 500px;
-			text-align: center;
+			max-width: 90%;
+			margin: 10px auto;
 		}
-
-		#explanation {
-			display: none;
+		/* adjust the font size for smaller screens */
+		h1 {
+			font-size: 24px;
+		}
+		button {
+			font-size: 14px;
+			padding: 8px 16px;
+		}
+		/* adjust the header and footer styles for smaller screens */
+		header {
+			position: static;
+		}
+		footer {
+			height: auto;
+			position: static;
 			margin-top: 20px;
-			max-width: 500px;
-			text-align: left;
-			margin: 0 auto;
 		}
+	}
+</style>
 
-		#test {
-			display: none;
-			margin-top: 20px;
-			max-width: 500px;
-			text-align: left;
-			margin: 0 auto;
-		}
-@media only screen and (max-width: 600px) {
-  /* adjust the layout for smaller screens */
-  body {
-    font-size: 14px;
-  }
-  #activity-container {
-    max-width: 90%;
-    margin: 10px auto;
-  }
-  /* adjust the font size for smaller screens */
-  h1 {
-    font-size: 24px;
-  }
-  button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
-	</style>
 </head>
 <body>
-<header>
+<header><div class="logo">
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/001/201/180/small/brain.png" alt="Logo" style="max-width: 50px;">
+</div>
 		<h1>HUGMYNDIR UM VIRKNI</h1>
 	</header>
-<main>
 <br><br><br><br><br><br><br><br>
 	<button onclick="getActivity()">Ýttu til að fá hugmyndir </button>
 	<div id="activity-container"></div>
@@ -161,6 +164,7 @@ Ef ekkert gerist, gerist ekkert. Hið umdeilda ljóðskáld, Charles Bukowski sa
 Við getum ekki alltaf beðið eftir því að lífið leiði okkur á einhvern stað. Langanir okkar, þarfir og draumar er afleiðing gjörða okkar. Ef maður gerir ekkert, gerist ekkert. En það þýðir vissulega samt ekki að við þurfum alltaf að vera virk. Stundum er gott að draga sig í hlé og njóta einveru og slökunar: Sitja í sófanum, hanga í símanum eða tölvunni, hámglápa á sjónvarp eða sofa aðeins meira. Þessi hegðun getur verið nauðsynleg til að berjast gegn streitu eða hvíla sig eftir annasaman tíma. En ef þessi hegðun er ríkjandi eða einkennandi í lífinu okkar þurfum við að fara að auka virknina.
 <br></p>
 <h1>En af hverju aukin virkni?</h1>
+<br>
 <p class="new_font">
 Ein mikilvægasta ástæðan til að auka virkni er því hún er verndandi þáttur gegn þunglyndi. Rannsóknir hafa sýnt að aukin virkni bætir líðan og vinnur gegn þunglyndi. Best er þá að virknin sé eitthvað sem hefur merkingu fyrir fólki. Ekki er nóg að fara í sund ef þér hefur alltaf þótt leiðinlegt í sundi. Til að bæta líðan þarf maður að prófa sig áfram. Sú virkni sem bætir líðan hjá einum þarf ekki að bæta líðan hjá öðrum. Því er ekki alltaf gagnlegt að segja þunglyndum einstaklingi að fara bara út í göngutúr.</p>
 <p class="new_font">Sú virkni sem getur bætt líðan skiptist gróflega í tvo flokka: 
@@ -181,16 +185,19 @@ Oftast upplifum við einhverskonar blöndu af þessum fjórum flokkum en sama hv
 <br><br>
 </p>
 <h1>LEIÐIR TIL AÐ AUKA VIRKNI</h1>
+<br>
 <h2>1. Setja markmið</h2>
+<br>
 <p class="new_font">
 Til að auka líkur á að maður framkvæmi það sem þarf að gera, geta markmið hjálpað. Bæði skammtíma og langtíma markmið auka líkur á því að eitthvað verði framkvæmt. Hægt er að styðjast t.d. við <a href="https://is.wikipedia.org/wiki/SMART-reglan">SMART markmið.</a> Í lok hvers dags getur einnig verið gott að setja að minnsta kosti eitt einfalt markmið fyrir daginn eftir. Að kvöldi má til dæmis segja við sjálfan sig (eða skrifa niður): <em>Á morgun klukkan 16:00 ætla ég að fara með dósirnar í endurvinnslu.</em>
-</p>
+</p><br>
 <h2>2. Fimm mínútna reglan</h2>
+<br>
 <p class="new_font">
 Þessa reglu má sennilega rekja til bandaríska sálfræðings Christine Padesky. Reglan er stundum kölluð 10 mínútna reglan en þar er grundvallarhugmyndin þó sú sama. Í hvert skipti sem við nennum ekki að gera eitthvað ákveðið er gott að muna að oft nennum við einfaldlega ekki að byrja. En ef við náum að byrja er ekkert mál að fylgja verkinu eftir. Þess vegna getur verið gott að segja við sjálfan sig: <em>“Allt í lagi, ég skal gera þetta í 5 mínútur, ef ég hrekk ekki í gírinn má ég hætta án þess að fá samviskubit”</em>. 
 <br><br>Dæmi: Að moka innkeyrsluna sem er full af snjó. Maður klæðir sig í útiföt og reimar á sig skóna. Síðan stillir maður klukkuna á fimm mínútur og fer út og byrjar. Yfirleitt er maður nýbyrjaður þegar klukkan hringir. Þá er mjög líklegt að maður haldi áfram og jafnvel klári verkið. En ef maður klárar það ekki er það allt í lagi. Maður reyndi allavega og 5 mínútna verk er betra en ekkert. Maður prófar bara aftur síðar.
-</p>
-<h2>3. Skipulag</h2>
+</p><br>
+<h2>3. Skipulag</h2><br>
 <p class="new_font">
 Ef eitthvað er kerfisbundið og fyrirsjáanlegt er auðveldara að framkvæma það. Skipulögð virkni getur verið að skrifa niður í dagbók (til dæmis í símanum) stað og stund sem eitthvað fer fram. Í stað þess að segjast ætla með bílinn í dekkjaskipti í næstu viku er betra að skrifa niður: <em>Fara með bílinn á hjólbarðaverkstæði Dúdda klukkan 8 á þriðjudagsmorgninum fyrir vinnu</em>. Eins er hægt að ákveða í lok dags einhverja virkni daginn eftir: <em>Á morgun ætla ég út að hlaupa strax eftir vinnu.</em> Skipulögð virkni getur líka verið að hafa stundatöflu. Þá er hægt að prenta út autt vikuskipulag og seta til dæmis á ísskáp og skrá þar allt sem þarf að gera. 
 <br><br>
@@ -211,13 +218,14 @@ Ef eitthvað er kerfisbundið og fyrirsjáanlegt er auðveldara að framkvæma �
 Svona virðist þetta viðráðanlegra en að hugsa aðeins <em>“þrífa eftir veislu”</em>. Eins er gott að muna að hálfnað verk þá hafið er. Þannig er best að byrja á því sem er mest aðgengilegt. Það að opna glugga til að fá frískt loft er mjög auðvelt og aðgengilegt en á sama tíma setur það tóninn, <em>“ég er byrjaður”</em>.
 <br>
 Ef mörg verkefni eru hangandi yfir manni getur hjálpað að skrifa þau upp og flokka út frá <a href="https://www.eisenhower.me/eisenhower-matrix/">Eisenhower boxi</a>.
-</p>
-<h2>4. Grípa og endurmeta hamlandi hugsanir</h2>
+</p><br>
+<h2>4. Grípa og endurmeta hamlandi hugsanir</h2><br>
 <p class="new_font">
 
 Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstitute.org/get-informed/what-is-cognitive-therapy/">hugræn atferlismeðferð</a> byggir á og eins í <a href="https://en.wikipedia.org/wiki/Stoicism">stóuspeki</a> er að hugsanir okkar stýra viðbrögðum okkar. Ef við viljum breyta viðbrögðum þurfum við fyrst að breyta hugsunum. Því er gott að spyrja sig hvaða hugsanir eru að hamla virkni.
-<br><br>
+<br>
 </p>
+<br>
 <table>
   <tr>
     <th>Hamlandi hugsun</th>
@@ -259,7 +267,7 @@ Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstit
     <td><em>"Ég ætti að eyða tímanum í eitthvað annað"</em></td>
     <td>Stundum er þetta rétt. En þá er mikilvægt að vera heiðarlegur og <strong>gera</strong><em> “þetta eitthvað annað.”</em> Ef þú ert að nota þetta sem afsökun til að liggja í vanvirkni, taktu þá stökkið án frekari umhugsunar og drífðu verkið af.</td>
   </tr>
-</table>
+</table><br>
 
 <p class="new_font">
 Þannig að, virkni er allt sem við komum í verk. Sama hvort það er smátt eða stórt þá er öll virkni betri en engin. Við virkum aðeins ef við erum virk. Ef við blöndum saman forvitni og elju og framkvæmum stöðugar virknitilraunir mun lífið að öllum líkindum leiða okkur í ótrúlegustu áttir. 
@@ -316,11 +324,11 @@ Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstit
 			"Farðu í nudd",
 			"Handskrifaðu eitthvað",
 			"Finndu eitthvað fyndið á netinu eða annað sem fær þig til að hlæja ",
-			"Far á skauta eða skíði",
+			"Farðu á skauta eða skíði",
 			"Farðu í bíó. Já það má fara ein/n",
 			"Taktu nokkrar armbeygjur eða aðra líkamsþyngdaræfingu",
 			"Skrifaðu niður 5 hluti sem þú mátt vera þakklát/ur fyrir",
-			"Klæddu big í flott föt",
+			"Klæddu þig í flott föt",
 			"Taktu til í tölvunni eða símanum",
 			"Skrifaðu niður lista af óklárðuðum verkum og byrjaði á því léttasta",
 			"Þrífðu eitthvað sem hefur ekki verið þrifið lengi",
@@ -354,8 +362,9 @@ Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstit
   }
 }
 </script>
-</main>
+
 <br><br>
+</body>
 <footer>
   <p>
     Vefsíða þessi er fyrst og fremst gerð til að veita fólki hugmyndir um virkni.<br>
@@ -364,8 +373,8 @@ Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstit
     <strong>www.ottar.is</strong>
     <br>
     ©2023
+<br>
   </p>
 </footer>
-</body>
 </html>
 	

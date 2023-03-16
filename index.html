@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html>
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -8,38 +7,48 @@
 <link rel="shortcut icon" type="image/png" href="https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-22/c93d11bd8d07ea09e3e312f0326c0807.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hvað á ég að gera?</title>
-<style>
-body {background-color: #f5eee1;}
-h1   {color: #111859;}
-p    {color: #2e2c4a; font-family: courier;
-  font-size: 160%; border: 1px dashed #111859;
-padding: 30px;
-margin: 50px;
-}
 
-img { max-width: 100%; }
+	<title>Hugmyndir um virkni</title>
+	<style type="text/css">
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
 
+		h1 {
+			margin-top: 50px;
+		}
+
+		button {
+			margin: 20px;
+			padding: 10px 20px;
+			background-color: #2596be;
+			color: white;
+			border: none;
+			border-radius: 8px;
+			font-size: 16px;
+			cursor: pointer;
+		}
 p.new_font {
      /*text-indent: 1.5em;*/
      font: 14px Helvetica, Sans-Serif;
-     color: white;
+     color: #4d5051;
      overflow: hidden;
      padding: 15px;
      text-align: justify;
-     background: rgb(0, 0, 0,0.3); /* fallback color */
-     background: rgba(0, 0, 0, 0.7);
+     background: rgb(214,209,192); /* fallback color */
+     background: rgba(214,209,192);
 } 
 
 p.auka {
      /*text-indent: 1.5em;*/
      font: 14px Helvetica, Sans-Serif;
-     color: #111859;
+     color: #4d5051;
      overflow: hidden;
      padding: 15px;
      text-align: justify;
-     background: #f5eee1); /* fallback color */
-     background: #f5eee1);
+     background: #d6d1c0); /* fallback color */
+     background: #d6d1c0);
 } 
 
 p.loka {
@@ -51,103 +60,65 @@ p.loka {
      text-align: center;
 border: 0px;
     
-} 
-.button {
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-font-family: courier;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
 
-.button1 {
-  background-color: #f5eee1; 
-  color: #111859; 
-  border: 2px solid #111859;
-}
+		#activity-container {
+			margin: 20px auto;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 8px;
+			max-width: 500px;
+			text-align: center;
+		}
 
-.button1:hover {
-  background-color: #111859;
-  color: white;
-}
+		#explanation {
+			display: none;
+			margin-top: 20px;
+			max-width: 500px;
+			text-align: left;
+			margin: 0 auto;
+		}
 
-.button2 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
+		#test {
+			display: none;
+			margin-top: 20px;
+			max-width: 500px;
+			text-align: left;
+			margin: 0 auto;
+		}
+@media only screen and (max-width: 600px) {
+  /* adjust the layout for smaller screens */
+  body {
+    font-size: 14px;
+  }
+  #activity-container {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+  /* adjust the font size for smaller screens */
+  h1 {
+    font-size: 24px;
+  }
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
-
-.button2:hover {
-  background-color: #008CBA;
-  color: white;
-}
-
-#myDIV {
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  background-color: lightblue;
-  margin-top: 20px;
-}
-
-a {
-  color: white;
-}
- table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
+	</style>
 </head>
-
 <body>
-<center>
-<br><br>
-<button class="button button1" onclick="GetValue();">Hvað á ég að gera?</button>
-<br>
-<br>
-<p id="message" >↑ Ýttu á takkann uppi ↑</p>
-</center>
-<script>
-function GetValue()
-{
-    var myarray= new Array("Þrífa klósettið","Fara út í göngutúr","Taka til í fataskáp","Eldaðu eitthvað nýtt","Hugleiddu","Farðu í kalda sturtu","Rifjaðu upp gömul áhugamál","Lagaðu eitthvað sem þarf að laga","Rifjaðu upp eða lærðu nýtt tungumál","Settu markmið fyrir næsta dag","Lestu fræðandi grein á netinu","Lestu","Taktu til","skrifaðu niður lista yfir ókláruð verk","Þrífðu í 30 mínútur","Hittu vin","Þrífðu eitthvað sem þú hefur ekki þrifið lengi","Farðu í göngutúr","Skrifaðu þakklætisbréf","Skrifaðu niður 5 hluti sem þú ert þakklát/ur fyrir", "Gerðu armbeygjur eða aðra líkamsþyngdaræfingu", "Hlustaðu á hlaðvarp", "Farðu í sund", "Farðu að hjóla", "Fáðu þér stórt vatnsglas", "Farðu í búð og smakkaðu nýtt grænmeti eða ávöxt", "Smakkaðu mat sem þér fannst vondur en þú hefur ekki smakkað lengi og sjáðu hvað þér finnst", "Farðu í nudd", "Rifjaðu upp góðar minningar", "Farðu á kaffihús", "Finndu eitthvað fyndið á netinu eða annað sem fær þig til að hlæja", "Stundaðu kynlíf sé þess kostur", "Farðu í bíó",
-"Farðu í stjörnuskoðun","Heitt bað eða heitur pottur","Fara að prjóna","Hlustaðu á tónlist","Farðu að teikna eða mála","Gerast túristi í eigin landi","Dansaðu","Föndra", "Hrósaðu einhverjum", "Garðvinna","Púsla","Skoðaðu gamlar myndir","Skrifaðu upp viðskiptahugmyndir","Taktu til í tölvunni","Skrifaðu ljóð eða smásögu","Farðu í fótabað","Taka ljósmyndir?","Heimsækja ættingja","Leika við dýr","Skrifaðu dagbók","Gleðja einhvern","Fara í leikhús","Fara á skauta","Horfðu á uppáhalds kvikmyndina þína","Gerðu þig fína/nn","Haltu veislu/matarboð","Knúsaðu","Skráðu þig á námskeið", "Farðu í Yoga", "Syngdu!", "Borðaðu uppáhalds matinn þinn sem barn", "Farðu með eitthvað sem þú ert hættur að nota í endurvinnslu", "Baka", "Gerðu góðverk", "Gerðu eitthvað sem krefst hugrekkis","Hringja í gamlan vin");
-    var random = myarray[Math.floor(Math.random() * myarray.length)];
-   document.getElementById("message").innerHTML=random;
-}
-</script>
-<br>
-<br>
-<br>
-<center><button name="info" onclick="toggleDiv('element', this, 'Fela texta', 'Af hverju aukin virkni?')">Af hverju aukin virkni?</button>
-<br>
-<div align="center" id="element" style="display: none;"><br><p class="new_font">Ein forsenda heilsu er virkni. 
+	<h1>Hugmyndir um virkni</h1>
+	<button onclick="getActivity()">Ýttu til að fá hugmyndir </button>
+	<div id="activity-container"></div>
+	<button onclick="showExplanation()">Af hverju að auka virkni?</button>
+	<div align="center" id="explanation" style="display: none;"><br><p class="new_font">Ein forsenda heilsu er virkni. 
 Ef ekkert gerist, gerist ekkert. Hið umdeilda ljóðskáld, Charles Bukowski sagði:<br><br>
 <em>“Ég var að bíða eftir því að eitthvað stórkostlegt myndi gerast. En á meðan að árin flugu framhjá mér, þá gerðist ekkert, nema að ég lét það verða.”</em><br><br>
 <br>
-Við getum ekki alltaf beðið eftir því að lífið leiði okkur á einhvern stað. Langanir okkar, þarfir og draumar er afleiðing gjörða okkar. Ef maður gerir ekkert, gerist ekkert. En það þýðir vissulega samt ekki að við þurfum alltaf að vera virk. Stundum er gott að draga sig í hlé og njóta einveru og slökunar. Sitja í sófanum, hanga í símanum eða tölvunni, hámglápa á sjónvarp eða sofa aðeins meira. Þessi hegðun getur verið nauðsynleg til að berjast gegn streitu eða hvíla sig eftir annasaman tíma. En ef þessi hegðun er ríkjandi eða einkennandi í lífinu okkar þurfum við að fara að auka virknina.
+Við getum ekki alltaf beðið eftir því að lífið leiði okkur á einhvern stað. Langanir okkar, þarfir og draumar er afleiðing gjörða okkar. Ef maður gerir ekkert, gerist ekkert. En það þýðir vissulega samt ekki að við þurfum alltaf að vera virk. Stundum er gott að draga sig í hlé og njóta einveru og slökunar: Sitja í sófanum, hanga í símanum eða tölvunni, hámglápa á sjónvarp eða sofa aðeins meira. Þessi hegðun getur verið nauðsynleg til að berjast gegn streitu eða hvíla sig eftir annasaman tíma. En ef þessi hegðun er ríkjandi eða einkennandi í lífinu okkar þurfum við að fara að auka virknina.
 <br></p>
 <h1>En af hverju aukin virkni?</h1>
 <p class="new_font">
-Ein mikilvægasta ástæðan til að auka virkni er því hún er verndandi þáttur gegn þunglyndi. Rannsóknir hafa sýnt að aukin virkni bæti líðan og vinni gegn þunglyndi. Best er þá að virknin sé eitthvað sem hefur merkingu fyrir fólki. Ekki er nóg að fara í sund ef þér hefur alltaf þótt leiðinlegt í sundi. Til að bæta líðan þarf maður að prófa sig áfram. Sú virkni sem bætir líðan hjá einum þarf ekki að bæta líðan hjá öðrum. Því er ekki alltaf gagnlegt að segja þunglyndum einstaklingi að fara bara út í göngutúr.</p>
+Ein mikilvægasta ástæðan til að auka virkni er því hún er verndandi þáttur gegn þunglyndi. Rannsóknir hafa sýnt að aukin virkni bætir líðan og vinnur gegn þunglyndi. Best er þá að virknin sé eitthvað sem hefur merkingu fyrir fólki. Ekki er nóg að fara í sund ef þér hefur alltaf þótt leiðinlegt í sundi. Til að bæta líðan þarf maður að prófa sig áfram. Sú virkni sem bætir líðan hjá einum þarf ekki að bæta líðan hjá öðrum. Því er ekki alltaf gagnlegt að segja þunglyndum einstaklingi að fara bara út í göngutúr.</p>
 <p class="new_font">Sú virkni sem getur bætt líðan skiptist gróflega í tvo flokka: 
 <br><br>(1) Þær athafnir sem veita vellíðan eins og til dæmis að hlusta á góða tónlist, fara í heitt bað eða láta nudda sig.
 <br><br>(2) Þær athafnir sem vekja upp afrekstilfinningu. Það er, allt sem við getum verið nokkuð stolt að hafa gert. Það eru athafnir eins og að þrífa, læra heima eða klára einhver verkefni sem eru búin að hanga yfir manni.<br><br> 
@@ -162,18 +133,8 @@ Eftir langan og erfiðan vinnudag getur vissulega verið einstaklega notalegt a�
 <strong> 4.</strong> Þreyta vegna aðgerðarleysis</em>	
 </p>
 <p class="new_font">
-Oftast upplifum við einhverskonar blöndu af þessum fjórum flokkum en sama hvaða tegund þreytu eru orsökin þá upplifum við ýmis líkamleg einkenni þreytu sem við túlkum bæði meðvitað og ómeðvitað sem þörf á hvíld. En það er ekki alltaf raunin að við þurfum hvíld, þó það eigi stundum við. En til að greina á milli er mikilvægt að vera gagnrýninn á eigin upplifanir. Spyrja sig hvaða áhrif ákveðin viðbrögð hafa. Hvaða áhrif hefur það á líðan mína að fara upp í sófa? En til lengri tíma? Mun ég raunverulega endurheimta orku ef ég fer og glápi á sjónvarpið? Er líklegra að ég nenni að setja í þvottavél á eftir ef ég leggst í sófann núna? Eða er líklegra að það sé betra að gera það fyrst og síðan fara í sófann? Spurningarnar eru óteljandi og einstaklingsbundnar en það skiptir máli er að bregðast ekki við á sjálfsstýringu heldur reyna að þjálfa upp gagnlegri hugsun sem leiðir ekki til vítahringja. 
+Oftast upplifum við einhverskonar blöndu af þessum fjórum flokkum en sama hvaða tegund þreytu eru orsökin þá upplifum við ýmis líkamleg einkenni þreytu sem við túlkum bæði meðvitað og ómeðvitað sem þörf á hvíld. En það er ekki alltaf raunin að við þurfum hvíld, þó það eigi stundum við. En til að greina á milli er mikilvægt að vera gagnrýnin/n á eigin upplifanir. Spyrja sig hvaða áhrif ákveðin viðbrögð hafa. Hvaða áhrif hefur það á líðan mína að fara upp í sófa? En til lengri tíma? Mun ég raunverulega endurheimta orku ef ég fer og glápi á sjónvarpið? Er líklegra að ég nenni að setja í þvottavél á eftir ef ég leggst í sófann núna? Eða er líklegra að það sé betra að gera það fyrst og síðan fara í sófann? Spurningarnar eru óteljandi og einstaklingsbundnar en það skiptir máli er að bregðast ekki við á sjálfsstýringu heldur reyna að þjálfa upp gagnlegri hugsun sem leiðir ekki til vítahringja. 
 <br><br>
-Tökum dæmi um einn slíkan vítahring:
-</p>
-<p class="auka">
-Siggi kemur heim úr vinnunni á föstudegi eftir mjög erfiða viku. Hann hugsar “Þetta var rosaleg vika, ég á nú skilið að slappa aðeins af”. Hann sest í sófann og horfir á nokkra þætti í sjónvarpinu. Áður en hann veit af er klukkan orðinn sex og hann þarf að ákveða hvað er í matinn. Hann stendur upp og fattar að hann er orðinn mjög svangur. Hann er ennþá slakur og nokkuð sljór eftir langa setu og ákveður að panta sér pizzu. Á meðan hann bíður fær hann sér nokkur kex. Einföldu kolvetnin gera hann ennþá þreyttari. Hann fer aftur í sófann og bíður eftir pizzunni. Þegar pizzan kemur borðar hann fyrir framan sjónvarpið því hann var dottinn í nýja þáttaröð. Allt í einu er klukkan orðinn margt og hann reynir að fara að sofa. Hann byrjar að hugsa um hvað hann gerði lítið í dag. Hann skammast í sjálfum sér fyrir að hafa ekki gengið fram og tekið smá til. Hann man líka að hann ætlaði að fara á pósthúsið sem hann gleymdi. Hann finnur smá depurð út af þessum hugsunum og finnst hann vera letingi. Daginn eftir vaknar hann því í óþægilegu skapi. Hann er þungur á sér og finnst allt í einu svo mikið að gera. Hann tekur eftir því að hann er ennþá þreyttur og nennir því ekki strax frammúr rúminu. Hann fær frekari neikvæðar hugsanir um hvað hann er latur og verður fyrir vikið þyngri í skapinu og enn þreyttari. Hann eyðir stærsta hluta dagsins í rúminu og vítahringurinn heldur þannig áfram alla helgina. Á mánudeginum mætir hann illa upplagður í vinnuna og upplifir þar með aðra erfiða viku. Vítahringurinn styrkist!
-<br>
-<br>
-<img src="https://i.imgur.com/dUud3Ew.png" alt="Vítahringur" class="center">
-</p>
-<p class="new_font">
-Þó þetta dæmi sé nokkuð ýkt sjáum við hvað virkni er mikilvæg. Virkni er eins og sjálftrekktu úrin. Það eru úr sem ganga án rafhlöðu svo lengi sem það er einhver hreyfing á þeim. Sé úrið látið liggja of lengi þarf að stilla það upp á nýtt.  Í dæminu um Sigga hefði ein lítil breyting strax geta rofið vítahringinn. Ef hann hefði farið á pósthúsið strax eftir vinnu, gengið smá frá og boðið til dæmis vin í heimsókn hefði vítahringurinn kannski aldrei myndast. 
 </p>
 <h1>LEIÐIR TIL AÐ AUKA VIRKNI</h1>
 <h2>1. Setja markmið</h2>
@@ -260,36 +221,106 @@ Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstit
 Þannig að, virkni er allt sem við komum í verk. Sama hvort það er smátt eða stórt þá er öll virkni betri en engin. Við virkum aðeins ef við erum virk. Ef við blöndum saman forvitni og elju og framkvæmum stöðugar virknitilraunir mun lífið að öllum líkindum leiða okkur í ótrúlegustu áttir. 
 </p>
 </div>
-    <br>
-      <button name="info" onclick="toggleDiv('element2', this, 'Fela próf', 'Þunglyndispróf')">Þunglyndispróf</button><br>
-  <div id="element2" style="display: none;">
+	<br>
+	<button onclick="showTest()">Taktu þunglyndispróf</button>
+<div id="test" style="display: none;">
     <iframe id="iframe2" height="2800" width="100%" scrolling="no" frameborder="no" src="https://ottarb.shinyapps.io/phqapp/"></iframe>
   </div>
 
-</center>
-    
-<script>
-function toggleDiv(elementId, button, textOn, textOff) {
-  var style = document.getElementById(elementId).style;
-  var iframe = document.getElementById("element");
-  if (elementId == "element2") {
-      iframe = document.getElementById("iframe2");
-  }
-  if( style.display == "none" ) {
-    style.display = "block";
-    button.innerHTML = textOn;
+
+	<script type="text/javascript">
+		var activities = [
+			"Lestu bók",
+			"Farðu í göngutúr",
+			"Skrifaðu í dagbók",
+			"Prófaðu nýja uppskrift",
+			"Lærðu tungumál",
+			"Horfðu á mynd",
+			"Hlustaðu á tónlist",
+			"Púslaðu",
+			"Teiknaðu eða litaðu",
+			"Dansaðu",
+			"Farðu í jóga",
+			"Spilaðu borðspil",
+			"Farðu út í náttúruna",
+			"Farðu í búð og borðaðu ávöxt eða græntmeti sem þú hefur aldrei smakkað",
+			"Farðu á safn eða sýningu",
+			"Farðu á tónleika",
+			"Taktu ljósmyndir",
+			"Hringdu í einhvern",
+			"Far að hjóla",
+			"Hjálpaðu einhverjum",
+			"Lærðu eitthvað nýtt",
+			"Farðu í bað eða sturtu",
+			"Hugleiddu",
+			"Taktu til eða þrífðu",
+			"Lagaðu eitthvað sem þarf að laga",
+			"Stundaðu kynlíf sé þess kostur",
+			"Rifjaðu upp gömul áhugamál",
+			"Perlaðu",
+			"Skrifaðu ljóð eða smásögu",
+			"Lestu fræðandi grein á netinu",
+			"Leiktu við dýr ef þú getur",
+			"Skrifaðu í dagbók",
+			"Knúsaðu einhvern ef þú getur",
+			"Syngdu!",
+			"Farðu með eitthvað í endurvinnslu sem þú ert hætt/ur að nota",
+			"Bakaðu eitthvað gott",
+			"Gerðu eitthvað sem krefst hugrekkis",
+			"Smakkaðu mat sem þú hefur ekki smakkað lengi en þér fannst áður vondur",
+			"Skráðu þig á eitthvað námskeið",
+			"Farðu í nudd",
+			"Handskrifaðu eitthvað",
+			"Finndu eitthvað fyndið á netinu eða annað sem fær þig til að hlæja ",
+			"Far á skauta eða skíði",
+			"Farðu í bíó. Já það má fara ein/n",
+			"Taktu nokkrar armbeygjur eða aðra líkamsþyngdaræfingu",
+			"Skrifaðu niður 5 hluti sem þú mátt vera þakklát/ur fyrir",
+			"Klæddu big í flott föt",
+			"Taktu til í tölvunni eða símanum",
+			"Skrifaðu niður lista af óklárðuðum verkum og byrjaði á því léttasta",
+			"Þrífðu eitthvað sem hefur ekki verið þrifið lengi",
+			"Horfðu á uppáhalds kvikmyndina þína frá því þú varst barn",
+			"Farðu í fótabað"
+		];
+
+	function getActivity() {
+		var activityContainer = document.getElementById("activity-container");
+		var randomActivity = activities[Math.floor(Math.random() * activities.length)];
+		activityContainer.innerHTML = "<p>" + randomActivity + "</p>";
+	}
+
+	function showExplanation() {
+		// toggle the display of the explanation text
+		var explanation = document.getElementById("explanation");
+		if (explanation.style.display === "none") {
+			explanation.style.display = "block";
+		} else {
+			explanation.style.display = "none";
+		}
+	}
+
+	function showTest() {
+// toggle the display of the test text
+  var test = document.getElementById("test");
+  if (test.style.display === "none") {
+    test.style.display = "block";
   } else {
-    style.display = "none";
-    button.innerHTML = textOff;
+    test.style.display = "none";
   }
 }
 </script>
-<br>
-<br>
-
-
-
 </body>
 <br><br><br><br>
-<footer><p class="loka">Vefsíða þessi er fyrst og fremst gerð til að veita fólki hugmyndir um virkni. Vefsíðan er ekki hugsuð sem sjálfshjálparefni í stað sálfræðiþjónustu og er fólki sem grunar slíkan vanda bent á að hafa samband við t.d. heilsugæsluna sína.<br> <strong>www.ottar.is<br>©2023</strong></p></footer>
+<footer>
+  <p class="loka">
+    Vefsíða þessi er fyrst og fremst gerð til að veita fólki hugmyndir um virkni.<br>
+    Vefsíðan er ekki hugsuð sem sjálfshjálparefni í stað sálfræðiþjónustu og er fólki sem grunar slíkan vanda bent á að hafa samband við t.d. heilsugæsluna sína.
+    <br> 
+    <a href="http://www.ottar.is"><strong>www.ottar.is</strong></a>
+    <br>
+    ©2023
+  </p>
+</footer>
 </html>
+	

@@ -10,9 +10,32 @@
 
 	<title>Hugmyndir um virkni</title>
 	<style type="text/css">
-		body {
+		
+	header {
+			background-color: #a79066;
+			color: #4d5051;
+			padding: 10px;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+	
+	footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #4d5051;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  font-size: 12px;
+}
+body {
 			font-family: Arial, sans-serif;
 			text-align: center;
+padding-bottom: 80px;
 		}
 
 		h1 {
@@ -60,6 +83,23 @@ p.loka {
      text-align: center;
 border: 0px;
     
+	header {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			position: fixed;
+			top: 20;
+			width: 100%;
+		}
+	
+		footer {
+			background-color: #2596be;
+			color: white;
+			padding: 20px;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
 
 		#activity-container {
 			margin: 20px auto;
@@ -106,7 +146,11 @@ border: 0px;
 	</style>
 </head>
 <body>
-	<h1>Hugmyndir um virkni</h1>
+<header>
+		<h1>HUGMYNDIR UM VIRKNI</h1>
+	</header>
+<main>
+<br><br><br><br><br><br><br><br>
 	<button onclick="getActivity()">Ýttu til að fá hugmyndir </button>
 	<div id="activity-container"></div>
 	<button onclick="showExplanation()">Af hverju að auka virkni?</button>
@@ -222,11 +266,11 @@ Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstit
 </p>
 </div>
 	<br>
-	<button onclick="showTest()">Taktu þunglyndispróf</button>
+	<button onclick="showTest()">Taktu þunglyndispróf</button><br><br>
 <div id="test" style="display: none;">
     <iframe id="iframe2" height="2800" width="100%" scrolling="no" frameborder="no" src="https://ottarb.shinyapps.io/phqapp/"></iframe>
   </div>
-
+<br><br>
 
 	<script type="text/javascript">
 		var activities = [
@@ -310,17 +354,18 @@ Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstit
   }
 }
 </script>
-</body>
-<br><br><br><br>
+</main>
+<br><br>
 <footer>
-  <p class="loka">
+  <p>
     Vefsíða þessi er fyrst og fremst gerð til að veita fólki hugmyndir um virkni.<br>
     Vefsíðan er ekki hugsuð sem sjálfshjálparefni í stað sálfræðiþjónustu og er fólki sem grunar slíkan vanda bent á að hafa samband við t.d. heilsugæsluna sína.
     <br> 
-    <a href="http://www.ottar.is"><strong>www.ottar.is</strong></a>
+    <strong>www.ottar.is</strong>
     <br>
     ©2023
   </p>
 </footer>
+</body>
 </html>
 	

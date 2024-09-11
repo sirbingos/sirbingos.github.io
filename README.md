@@ -1,0 +1,1 @@
+Vefsíða til að hjálpa fólki að fá hugmyndir um virkni. Sérstaklega hugsað fyrir fólk með þunglyndi en allir ættu að geta nýtt þetta. Er líka með tengingu við Shiny app sem ég gerði í R til að hjálpa fólki að meta þunglyndiseinkennin sín. 

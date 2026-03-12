@@ -1,405 +1,805 @@
 <!DOCTYPE html>
-<html>
+<html lang="is">
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="HandheldFriendly" content="true">
-<link rel="shortcut icon" type="image/png" href="https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-22/c93d11bd8d07ea09e3e312f0326c0807.ico"/>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hugmyndir um virkni</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="true">
+  <title>Hugmyndir um virkni</title>
+  <link rel="shortcut icon" type="image/png" href="https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-22/c93d11bd8d07ea09e3e312f0326c0807.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --primary-light: #ccfbf1;
+      --accent: #0ea5e9;
+      --bg: #f0fdfa;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.06);
+      --radius: 14px;
+      --radius-sm: 8px;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}	
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.header-icon {
-  background-image: url('https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-22/c93d11bd8d07ea09e3e312f0326c0807.ico');
-  background-size: cover;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-}
-.header-icons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.header-icons a {
-    color: #ffffff;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-.header-icons a:hover {
-    color: #2596be;
-}
+    /* ── Header ── */
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 18px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(13,148,136,0.25);
+    }
 
-header {
-		background-color: #6e9ea2;
-		color: #4d5051;
-		padding: 15px;
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
 
-	body {
-		font-family: Arial, sans-serif;
-		text-align: center;
-		position: relative;
-		min-height: 100vh;
-		max-height: 100vh;
-	}
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-	footer {
-		position: relitive;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 70px;
-		background-color: #4d5051;
-		color: #fff;
-		text-align: center;
-		padding: 10px;
-		font-size: 12px;
-	}
+    .header-brand img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      padding: 4px;
+      filter: brightness(0) invert(1);
+    }
 
-	h1 {
-		font-family: 'Roboto', sans-serif;
-  font-weight: 300;	
-		margin-top: 20x;
-	}
+    .header-brand h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
 
-	button {
-		margin: 20px;
-		padding: 10px 20px;
-		background-color: #2596be;
-		color: white;
-		border: none;
-		border-radius: 8px;
-		font-size: 16px;
-		cursor: pointer;
-	}
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
 
-	p.new_font {
-		font: 14px Helvetica, Sans-Serif;
-		color: #4d5051;
-		overflow: hidden;
-		padding: 20px 60px;
-		text-align: justify;
-		background: rgb(214, 209, 192); /* fallback color */
-		background: rgba(214, 209, 192);
-	}
+    .header-icons a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 1.1rem;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.2s, color 0.2s;
+    }
 
-	p.auka {
-		font: 14px Helvetica, Sans-Serif;
-		color: #4d5051;
-		overflow: hidden;
-		padding: 20px;
-		text-align: justify;
-		background: #d6d1c0; /* fallback color */
-		background: #d6d1c0;
-	}
+    .header-icons a:hover {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+    }
 
-	p.loka {
-		font: 10px courier;
-		color: #111859;
-		overflow: hidden;
-		padding: 20px;
-		text-align: center;
-		border: 1px;
-	}
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
+    /* ── Main layout ── */
+    main {
+      flex: 1;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 48px 24px 40px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
 
-  th {
-    font-size: 20px;
-  }
+    .hero-emoji {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+    }
 
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+    .hero h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
 
-	@media only screen and (max-width: 600px) {
-		/* adjust the layout for smaller screens */
-		body {
-			font-size: 14px;
-		}
-		#activity-container {
-			max-width: 90%;
-			margin: 10px auto;
-		}
-		/* adjust the font size for smaller screens */
-		h1 {
-			font-size: 24px;
-		}
-		button {
-			font-size: 14px;
-			padding: 8px 16px;
-		}
-		/* adjust the header and footer styles for smaller screens */
-		header {
-			position: static;
-		}
-		footer {
-			height: auto;
-			position: static;
-			margin-top: 20px;
-		}
-	}
-</style>
+    .hero p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 480px;
+      margin: 0 auto 28px;
+    }
 
+    /* ── Activity card ── */
+    .activity-section {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      padding: 32px 28px;
+      text-align: center;
+    }
+
+    .activity-section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    #activity-container {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    #activity-container p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--text);
+      background: var(--primary-light);
+      padding: 16px 28px;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--primary);
+      animation: fadeIn 0.35s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(13,148,136,0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13,148,136,0.4);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-outline {
+      background: var(--surface);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline.active {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* ── Expandable cards ── */
+    .expandable-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .expandable-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 28px;
+      cursor: pointer;
+      gap: 16px;
+      transition: background 0.2s;
+    }
+
+    .expandable-header:hover {
+      background: #f8fafc;
+    }
+
+    .expandable-header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .expandable-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .expandable-header h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .expandable-header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .chevron {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .expandable-card.open .chevron {
+      transform: rotate(180deg);
+    }
+
+    .expandable-body {
+      display: none;
+      border-top: 1px solid var(--border);
+    }
+
+    .expandable-card.open .expandable-body {
+      display: block;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Content typography ── */
+    .content {
+      padding: 32px 36px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .content p {
+      margin-bottom: 1.2em;
+      color: var(--text);
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .content em {
+      color: var(--primary-dark);
+      font-style: italic;
+    }
+
+    .content h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 32px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-light);
+    }
+
+    .content h2:first-child {
+      margin-top: 0;
+    }
+
+    .content h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin: 24px 0 8px;
+    }
+
+    .content ol {
+      padding-left: 1.4em;
+      margin-bottom: 1.2em;
+    }
+
+    .content ol li {
+      margin-bottom: 0.5em;
+    }
+
+    .content a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .content a:hover {
+      color: var(--primary-dark);
+    }
+
+    .quote-block {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 20px 0;
+      font-style: italic;
+      color: var(--primary-dark);
+    }
+
+    .fatigue-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .fatigue-item {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      font-size: 0.9rem;
+    }
+
+    .fatigue-item strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .section-label {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    /* ── Thought challenge table ── */
+    .thought-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+
+    .thought-table th {
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+    }
+
+    .thought-table th:first-child {
+      border-radius: var(--radius-sm) 0 0 0;
+    }
+
+    .thought-table th:last-child {
+      border-radius: 0 var(--radius-sm) 0 0;
+    }
+
+    .thought-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .thought-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .thought-table td:first-child {
+      font-style: italic;
+      color: var(--text-muted);
+      width: 35%;
+      font-weight: 500;
+    }
+
+    .thought-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    .thought-table tr:hover td {
+      background: var(--primary-light);
+    }
+
+    /* ── Method steps ── */
+    .method-step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content h3 {
+      margin-top: 4px;
+    }
+
+    /* ── Depression test iframe ── */
+    .test-container {
+      padding: 0;
+    }
+
+    .test-container iframe {
+      width: 100%;
+      height: 2800px;
+      border: none;
+      display: block;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      main {
+        padding: 20px 14px 40px;
+        gap: 14px;
+      }
+
+      .hero {
+        padding: 32px 18px 28px;
+      }
+
+      .hero h2 {
+        font-size: 1.35rem;
+      }
+
+      .content {
+        padding: 24px 20px;
+      }
+
+      .expandable-header {
+        padding: 18px 20px;
+      }
+
+      .fatigue-list {
+        grid-template-columns: 1fr;
+      }
+
+      .thought-table td:first-child {
+        width: auto;
+      }
+
+      .thought-table {
+        display: block;
+        overflow-x: auto;
+      }
+
+      .header-brand h1 {
+        font-size: 0.92rem;
+      }
+    }
+  </style>
 </head>
 <body>
+
+<!-- Header -->
 <header>
-    <div class="logo">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/001/201/180/small/brain.png" alt="Logo" style="max-width: 50px;">
+  <div class="header-inner">
+    <div class="header-brand">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/001/201/180/small/brain.png" alt="Logo">
+      <h1>HUGMYNDIR UM VIRKNI</h1>
     </div>
-    <h1>HUGMYNDIR UM VIRKNI</h1>
     <div class="header-icons">
-        <a href="https://www.linkedin.com/in/%C3%B3ttar-birgisson-156754219/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:ottar@ottar.is"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/%C3%B3ttar-birgisson-156754219/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:ottar@ottar.is" aria-label="Tölvupóstur"><i class="fas fa-envelope"></i></a>
     </div>
+  </div>
 </header>
 
-<br><br><br><br><br><br><br><br>
-	<button onclick="getActivity()">Ýttu til að fá hugmyndir </button>
-	<div id="activity-container"></div>
-	<button onclick="showExplanation()">Af hverju að auka virkni?</button>
-	<div align="center" id="explanation" style="display: none;"><br><p class="new_font">Ein forsenda heilsu er virkni. 
-Ef ekkert gerist, gerist ekkert. Hið umdeilda ljóðskáld, Charles Bukowski sagði:<br><br>
-<em>“Ég var að bíða eftir því að eitthvað stórkostlegt myndi gerast. En á meðan að árin flugu framhjá mér, þá gerðist ekkert, nema að ég lét það verða.”</em><br><br>
-<br>
-Við getum ekki alltaf beðið eftir því að lífið leiði okkur á einhvern stað. Langanir okkar, þarfir og draumar er afleiðing gjörða okkar. Ef maður gerir ekkert, gerist ekkert. En það þýðir vissulega samt ekki að við þurfum alltaf að vera virk. Stundum er gott að draga sig í hlé og njóta einveru og slökunar: Sitja í sófanum, hanga í símanum eða tölvunni, hámglápa á sjónvarp eða sofa aðeins meira. Þessi hegðun getur verið nauðsynleg til að berjast gegn streitu eða hvíla sig eftir annasaman tíma. En ef þessi hegðun er ríkjandi eða einkennandi í lífinu okkar þurfum við að fara að auka virknina.
-<br></p>
-<h1>En af hverju aukin virkni?</h1>
-<br>
-<p class="new_font">
-Ein mikilvægasta ástæðan til að auka virkni er því hún er verndandi þáttur gegn þunglyndi. Rannsóknir hafa sýnt að aukin virkni bætir líðan og vinnur gegn þunglyndi. Best er þá að virknin sé eitthvað sem hefur merkingu fyrir fólki. Ekki er nóg að fara í sund ef þér hefur alltaf þótt leiðinlegt í sundi. Til að bæta líðan þarf maður að prófa sig áfram. Sú virkni sem bætir líðan hjá einum þarf ekki að bæta líðan hjá öðrum. Því er ekki alltaf gagnlegt að segja þunglyndum einstaklingi að fara bara út í göngutúr.</p>
-<p class="new_font">Sú virkni sem getur bætt líðan skiptist gróflega í tvo flokka: 
-<br><br>(1) Þær athafnir sem veita vellíðan eins og til dæmis að hlusta á góða tónlist, fara í heitt bað eða láta nudda sig.
-<br><br>(2) Þær athafnir sem vekja upp afrekstilfinningu. Það er, allt sem við getum verið nokkuð stolt að hafa gert. Það eru athafnir eins og að þrífa, læra heima eða klára einhver verkefni sem eru búin að hanga yfir manni.<br><br> 
-Önnur ástæða til að auka virkni er staðreyndin að aukin virkni gerir mann orkumeiri. Það hljómar eins og þversögn að eyða orku til að fá orku en málið er að þegar maður er aðgerðarlaus lengi er eins og líkaminn fari á orkusparandi stillingu. Aðgerðarleysi gerir mann þreyttan og þreytan gerir mann aðgerðarlausan og þar af leiðandi getur aukin virkni komið í veg fyrir að þessi vítahringur myndast. 
-Eftir langan og erfiðan vinnudag getur vissulega verið einstaklega notalegt að fara í þægileg föt, hoppa í sófann og gleyma sér yfir sjónvarpinu eða týna sjálfum sér í upplýsingagnægð og grípandi afþreyingu í símanum eða spjaldtölvunni. Slík athöfn eða annað sambærilegt getur virkað sem einstaklega styrkjandi þáttur í vítahring sem við köllum leti, iðjuleysi, framtaksleysi eða sinnuleysi. Þegar við erum þreytt eða úrvinda vill líkaminn okkar hvíld. Það er eðlilegt. Þessi hvíld er svo þægileg að eðlilegt er að hegðunin styrkist og þreytan eykst ef við erum á sjálfsstýringu. En gróflega má skipta þreytu upp í fjóra mismunandi flokka. 
+<main>
 
-<br>
-<br>
-<em><strong>1.</strong> Þreyta sem kemur til vegna svefnleysis<br><br>
- <strong> 2.</strong> Þreyta sem kemur til vegna of mikillar orkunotkunnar líkamans<br><br>
- <strong> 3.</strong> Þreyta sem kemur til vegna mæðu eða sljóleika (til dæmis eftir einhæfa vinnu eða verkefnasetu í langan tíma)<br><br>
-<strong> 4.</strong> Þreyta vegna aðgerðarleysis</em>	
-</p>
-<p class="new_font">
-Oftast upplifum við einhverskonar blöndu af þessum fjórum flokkum en sama hvaða tegund þreytu eru orsökin þá upplifum við ýmis líkamleg einkenni þreytu sem við túlkum bæði meðvitað og ómeðvitað sem þörf á hvíld. En það er ekki alltaf raunin að við þurfum hvíld, þó það eigi stundum við. En til að greina á milli er mikilvægt að vera gagnrýnin/n á eigin upplifanir. Spyrja sig hvaða áhrif ákveðin viðbrögð hafa. Hvaða áhrif hefur það á líðan mína að fara upp í sófa? En til lengri tíma? Mun ég raunverulega endurheimta orku ef ég fer og glápi á sjónvarpið? Er líklegra að ég nenni að setja í þvottavél á eftir ef ég leggst í sófann núna? Eða er líklegra að það sé betra að gera það fyrst og síðan fara í sófann? Spurningarnar eru óteljandi og einstaklingsbundnar en það skiptir máli er að bregðast ekki við á sjálfsstýringu heldur reyna að þjálfa upp gagnlegri hugsun sem leiðir ekki til vítahringja. 
-<br><br>
-</p>
-<h1>LEIÐIR TIL AÐ AUKA VIRKNI</h1>
-<br>
-<h2>1. Setja markmið</h2>
-<br>
-<p class="new_font">
-Til að auka líkur á að maður framkvæmi það sem þarf að gera, geta markmið hjálpað. Bæði skammtíma og langtíma markmið auka líkur á því að eitthvað verði framkvæmt. Hægt er að styðjast t.d. við <a href="https://is.wikipedia.org/wiki/SMART-reglan">SMART markmið.</a> Í lok hvers dags getur einnig verið gott að setja að minnsta kosti eitt einfalt markmið fyrir daginn eftir. Að kvöldi má til dæmis segja við sjálfan sig (eða skrifa niður): <em>Á morgun klukkan 16:00 ætla ég að fara með dósirnar í endurvinnslu.</em>
-</p><br>
-<h2>2. Fimm mínútna reglan</h2>
-<br>
-<p class="new_font">
-Þessa reglu má sennilega rekja til bandaríska sálfræðings Christine Padesky. Reglan er stundum kölluð 10 mínútna reglan en þar er grundvallarhugmyndin þó sú sama. Í hvert skipti sem við nennum ekki að gera eitthvað ákveðið er gott að muna að oft nennum við einfaldlega ekki að byrja. En ef við náum að byrja er ekkert mál að fylgja verkinu eftir. Þess vegna getur verið gott að segja við sjálfan sig: <em>“Allt í lagi, ég skal gera þetta í 5 mínútur, ef ég hrekk ekki í gírinn má ég hætta án þess að fá samviskubit”</em>. 
-<br><br>Dæmi: Að moka innkeyrsluna sem er full af snjó. Maður klæðir sig í útiföt og reimar á sig skóna. Síðan stillir maður klukkuna á fimm mínútur og fer út og byrjar. Yfirleitt er maður nýbyrjaður þegar klukkan hringir. Þá er mjög líklegt að maður haldi áfram og jafnvel klári verkið. En ef maður klárar það ekki er það allt í lagi. Maður reyndi allavega og 5 mínútna verk er betra en ekkert. Maður prófar bara aftur síðar.
-</p><br>
-<h2>3. Skipulag</h2><br>
-<p class="new_font">
-Ef eitthvað er kerfisbundið og fyrirsjáanlegt er auðveldara að framkvæma það. Skipulögð virkni getur verið að skrifa niður í dagbók (til dæmis í símanum) stað og stund sem eitthvað fer fram. Í stað þess að segjast ætla með bílinn í dekkjaskipti í næstu viku er betra að skrifa niður: <em>Fara með bílinn á hjólbarðaverkstæði Dúdda klukkan 8 á þriðjudagsmorgninum fyrir vinnu</em>. Eins er hægt að ákveða í lok dags einhverja virkni daginn eftir: <em>Á morgun ætla ég út að hlaupa strax eftir vinnu.</em> Skipulögð virkni getur líka verið að hafa stundatöflu. Þá er hægt að prenta út autt vikuskipulag og seta til dæmis á ísskáp og skrá þar allt sem þarf að gera. 
-<br><br>
-Þá getur skipulag líka átt við þegar við stöndum frammi fyrir verkefni sem virðist óyfirstíganlegt. Þá getur verið gott að muna að gera bara eitt í einu og í réttri röð. Þannig getur verið gott að skrifa niður skrefin. Ef markmiðið er til dæmis að þrífa íbúðina eftir veislu er gott að skrifa, sem dæmi, niður:<br>
-<br>1.	Opna alla glugga
-<br>2.	Taka allt sem þarf að vaska upp og setja hjá vaski
-<br>3.	Setja allt rusl í ruslapoka
-<br>4.	Setja dósir í endurvinnslupoka
-<br>5.	Ganga frá öllum hlutum á sinn stað
-<br>6.	Þurrka af öllu
-<br>7.	Vaska upp
-<br>8.	Klára að þurrka af
-<br>9.	Þrífa klósett
-<br>10.	Þrífa baðvask
-<br>11.	Ryksuga
-<br>12.	Skúra
-<br><br>
-Svona virðist þetta viðráðanlegra en að hugsa aðeins <em>“þrífa eftir veislu”</em>. Eins er gott að muna að hálfnað verk þá hafið er. Þannig er best að byrja á því sem er mest aðgengilegt. Það að opna glugga til að fá frískt loft er mjög auðvelt og aðgengilegt en á sama tíma setur það tóninn, <em>“ég er byrjaður”</em>.
-<br>
-Ef mörg verkefni eru hangandi yfir manni getur hjálpað að skrifa þau upp og flokka út frá <a href="https://www.eisenhower.me/eisenhower-matrix/">Eisenhower boxi</a>.
-</p><br>
-<h2>4. Grípa og endurmeta hamlandi hugsanir</h2><br>
-<p class="new_font">
-
-Eitt meginstefið bæði í hugrænu kenningunni sem <a href="https://beckinstitute.org/get-informed/what-is-cognitive-therapy/">hugræn atferlismeðferð</a> byggir á og eins í <a href="https://en.wikipedia.org/wiki/Stoicism">stóuspeki</a> er að hugsanir okkar stýra viðbrögðum okkar. Ef við viljum breyta viðbrögðum þurfum við fyrst að breyta hugsunum. Því er gott að spyrja sig hvaða hugsanir eru að hamla virkni.
-<br>
-</p>
-<br>
-<table>
-  <tr>
-    <th>Hamlandi hugsun</th>
-    <th>Endurmat</th>
-  </tr>
-  <tr>
-    <td><em>"Ég nenni þessu ekki"</em></td>
-    <td>Oft nennum við ekki að gera hluti en þurfum þess. Ímyndaðu þér hversu vel þér mun líða þegar þú ert búinn að þessu. Þú getur jafnvel verðlaunað þér með einhverjum hætti fyrir að nenna þessu.</td>
-  </tr>
-  <tr>
-    <td><em>"Ég er ekki í réttu skapi"</em></td>
-    <td>Það er ekki til skap fyrir allar athafnir. Skap og áhugi vaknar stundum <strong>eftir</strong> að maður fer í verkið. Stundum er maður t.d. ekki í skapi til að hitta vini sína en þegar maður lætur sig hafa það er maður ánægður að hafa drifið sig í það.</td>
-  </tr>
-  <tr>
-    <td><em>"Ég kann þetta ekki"</em></td>
-    <td>Það er ekki afsökun til að sleppa því. Getur þú fundið leiðbeiningar eða beðið einhvern um að hjálpa þér?</td>
-  </tr>
-  <tr>
-    <td><em>"Þetta tekur of langan tíma"</em></td>
-    <td>Þá er gott að skipuleggja sig. Ef þú ert tímabundinn er gott að brjóta verkefnið upp í smærri verk og gera fyrsta hlutann ekki seinna en strax.</td>
-  </tr>
-  <tr>
-    <td><em>"Þetta er óþarfi"</em></td>
-    <td>Stundum finnst okkur eins og að ákveðin verk séu óþörf en ef þau eru skoðuð betur kemur í ljós að það var mikil þörf á þeim. Kannski er þörfin ekki fyrir okkur sjálf heldur einhvern annan. Dæmi um slíkt væri að fara með pappír í endurvinnslu.</td>
-  </tr>
-  <tr>
-    <td><em>"Þetta er of mikið fyrir mig eða of erfitt"</em></td>
-    <td>Reyndu að fá aðstoð ef verkið er raunverulega of mikið. Eins er gott að spyrja sig með gagnrýnum hætti hvort verkið sé raunverulega of mikið. Sumum finnst kannski of mikið verk að taka til í yfirfullri geymslu en þegar ráðist er á verkið var það auðveldara en talið var í upphafi.</td>
-  </tr>
-<tr>
-    <td><em>"Einhver annar á að gera þetta fyrir mig"</em></td>    
-    <td>Ef þetta er verk sem t.d. makinn þinn eða samstarfsfélagi á að gera. Ræddu þá við hann. Ef það myndi gleðja einhvern að þú gerir verkið fyrir hann, láttu þá verða að því að gera þetta fyrir hann. Skoðaðu líka með gagnrýnum hætti hvort þetta sé raunverulega verk einhvers annars.</td>
- </tr>
-<tr>
-    <td><em>"Þetta er tilgangslaust"</em></td> 
-    <td>Sumum finnst tilgangslaust að þrífa heima hjá sér því það verður strax aftur skítugt. En þegar þessi hugsun er skoðuð betur kemur í ljós að kostir þess að þrífa eru fleiri en gallarnir. Reyndu að skrifa niður þá kosti sem þú telur að fylgi því að klára verkið sem þér finnst tilgangslaust.</td>
-  </tr>
-  <tr>
-    <td><em>"Ég ætti að eyða tímanum í eitthvað annað"</em></td>
-    <td>Stundum er þetta rétt. En þá er mikilvægt að vera heiðarlegur og <strong>gera</strong><em> “þetta eitthvað annað.”</em> Ef þú ert að nota þetta sem afsökun til að liggja í vanvirkni, taktu þá stökkið án frekari umhugsunar og drífðu verkið af.</td>
-  </tr>
-</table><br>
-
-<p class="new_font">
-Þannig að, virkni er allt sem við komum í verk. Sama hvort það er smátt eða stórt þá er öll virkni betri en engin. Við virkum aðeins ef við erum virk. Ef við blöndum saman forvitni og elju og framkvæmum stöðugar virknitilraunir mun lífið að öllum líkindum leiða okkur í ótrúlegustu áttir. 
-</p>
-</div>
-	<br>
-	<button onclick="showTest()">Taktu þunglyndispróf</button><br><br>
-<div id="test" style="display: none;">
-    <iframe id="iframe2" height="2800" width="100%" scrolling="no" frameborder="no" src="https://ottarb.shinyapps.io/phqapp/"></iframe>
+  <!-- Hero / Activity Generator -->
+  <div class="hero">
+    <span class="hero-emoji">🌱</span>
+    <h2>Finndu eitthvað að gera</h2>
+    <p>Smelltu á hnappinn til að fá hugmynd að virkni. Öll virkni, stór sem smá, skiptir máli.</p>
+    <button class="btn btn-primary" onclick="getActivity()">
+      <i class="fas fa-shuffle"></i> Ýttu til að fá hugmynd
+    </button>
+    <div id="activity-container"></div>
   </div>
-<br><br>
 
-	<script type="text/javascript">
-		var activities = [
-			"Lestu bók",
-			"Farðu í göngutúr",
-			"Skrifaðu í dagbók",
-			"Prófaðu nýja uppskrift",
-			"Lærðu tungumál",
-			"Horfðu á mynd",
-			"Hlustaðu á tónlist",
-			"Púslaðu",
-			"Teiknaðu eða litaðu",
-			"Dansaðu",
-			"Farðu í jóga",
-			"Spilaðu borðspil",
-			"Farðu út í náttúruna",
-			"Farðu í búð og borðaðu ávöxt eða græntmeti sem þú hefur aldrei smakkað",
-			"Farðu á safn eða sýningu",
-			"Farðu á tónleika",
-			"Taktu ljósmyndir",
-			"Hringdu í einhvern",
-			"Far að hjóla",
-			"Hjálpaðu einhverjum",
-			"Lærðu eitthvað nýtt",
-			"Farðu í bað eða sturtu",
-			"Hugleiddu",
-			"Taktu til eða þrífðu",
-			"Lagaðu eitthvað sem þarf að laga",
-			"Stundaðu kynlíf sé þess kostur",
-			"Rifjaðu upp gömul áhugamál",
-			"Perlaðu",
-			"Skrifaðu ljóð eða smásögu",
-			"Lestu fræðandi grein á netinu",
-			"Leiktu við dýr ef þú getur",
-			"Skrifaðu í dagbók",
-			"Knúsaðu einhvern ef þú getur",
-			"Syngdu!",
-			"Farðu með eitthvað í endurvinnslu sem þú ert hætt/ur að nota",
-			"Bakaðu eitthvað gott",
-			"Gerðu eitthvað sem krefst hugrekkis",
-			"Smakkaðu mat sem þú hefur ekki smakkað lengi en þér fannst áður vondur",
-			"Skráðu þig á eitthvað námskeið",
-			"Farðu í nudd",
-			"Handskrifaðu eitthvað",
-			"Finndu eitthvað fyndið á netinu eða annað sem fær þig til að hlæja ",
-			"Farðu á skauta eða skíði",
-			"Farðu í bíó. Já það má fara ein/n",
-			"Taktu nokkrar armbeygjur eða aðra líkamsþyngdaræfingu",
-			"Skrifaðu niður 5 hluti sem þú mátt vera þakklát/ur fyrir",
-			"Klæddu þig í flott föt",
-			"Taktu til í tölvunni eða símanum",
-			"Skrifaðu niður lista af óklárðuðum verkum og byrjaði á því léttasta",
-			"Þrífðu eitthvað sem hefur ekki verið þrifið lengi",
-			"Horfðu á uppáhalds kvikmyndina þína frá því þú varst barn",
-			"Farðu í fótabað"
-		];
+  <!-- Why activity? -->
+  <div class="expandable-card" id="card-explanation">
+    <div class="expandable-header" onclick="toggleCard('explanation')">
+      <div class="expandable-header-left">
+        <div class="expandable-icon"><i class="fas fa-lightbulb"></i></div>
+        <div>
+          <h3>Af hverju að auka virkni?</h3>
+          <p>Fræðsla um virkni, þreytu og aðferðir til að koma hlutum í verk</p>
+        </div>
+      </div>
+      <i class="fas fa-chevron-down chevron"></i>
+    </div>
+    <div class="expandable-body" id="explanation">
+      <div class="content">
 
-	function getActivity() {
-		var activityContainer = document.getElementById("activity-container");
-		var randomActivity = activities[Math.floor(Math.random() * activities.length)];
-		activityContainer.innerHTML = "<p>" + randomActivity + "</p>";
-	}
+        <h2>Virkni er forsenda heilsu</h2>
+        <p>Ef ekkert gerist, gerist ekkert. Hið umdeilda ljóðskáld, Charles Bukowski sagði:</p>
+        <div class="quote-block">
+          "Ég var að bíða eftir því að eitthvað stórkostlegt myndi gerast. En á meðan að árin flugu framhjá mér, þá gerðist ekkert, nema að ég lét það verða."
+        </div>
+        <p>Við getum ekki alltaf beðið eftir því að lífið leiði okkur á einhvern stað. Langanir okkar, þarfir og draumar eru afleiðing gjörða okkar. Ef maður gerir ekkert, gerist ekkert. En það þýðir vissulega samt ekki að við þurfum alltaf að vera virk — stundum er gott að draga sig í hlé og njóta einveru og slökunar. En ef þessi hegðun er ríkjandi í lífinu okkar þurfum við að fara að auka virknina.</p>
 
-	function showExplanation() {
-		// toggle the display of the explanation text
-		var explanation = document.getElementById("explanation");
-		if (explanation.style.display === "none") {
-			explanation.style.display = "block";
-		} else {
-			explanation.style.display = "none";
-		}
-	}
+        <h2>En af hverju aukin virkni?</h2>
+        <p>Ein mikilvægasta ástæðan er að virkni er verndandi þáttur gegn þunglyndi. Rannsóknir hafa sýnt að aukin virkni bætir líðan. Sú virkni sem bætir líðan skiptist gróflega í tvo flokka:</p>
+        <p>
+          <strong>1. Vellíðanarathafnir</strong> — Hlutir sem veita ánægju, t.d. að hlusta á góða tónlist, fara í heitt bað eða láta nudda sig.<br><br>
+          <strong>2. Afreksathafnir</strong> — Hlutir sem vekja upp stoltu og tilfinninguna um að hafa náð einhverju, t.d. að þrífa, læra heima eða klára verkefni.
+        </p>
+        <p>Önnur ástæða er sú staðreynd að aukin virkni gerir mann orkumeiri. Það hljómar eins og þversögn en þegar maður er aðgerðarlaus lengi fer líkaminn á orkusparandi stillingu. Aðgerðarleysi gerir mann þreyttan og þreytan gerir mann aðgerðarlausan — og þar af leiðandi getur aukin virkni komið í veg fyrir þennan vítahring.</p>
 
-	function showTest() {
-// toggle the display of the test text
-  var test = document.getElementById("test");
-  if (test.style.display === "none") {
-    test.style.display = "block";
-  } else {
-    test.style.display = "none";
+        <p>Gróflega má skipta þreytu upp í fjóra flokka:</p>
+        <div class="fatigue-list">
+          <div class="fatigue-item"><strong>1.</strong> Þreyta vegna svefnleysis</div>
+          <div class="fatigue-item"><strong>2.</strong> Þreyta vegna of mikillar orkunotkunnar líkamans</div>
+          <div class="fatigue-item"><strong>3.</strong> Þreyta vegna mæðu eða sljóleika</div>
+          <div class="fatigue-item"><strong>4.</strong> Þreyta vegna aðgerðarleysis</div>
+        </div>
+        <p>Til að greina á milli er mikilvægt að vera gagnrýnin á eigin upplifanir — spyrja sig hvaða áhrif ákveðin viðbrögð hafa til lengri tíma.</p>
+
+        <h2>Leiðir til að auka virkni</h2>
+
+        <div class="method-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Setja markmið</h3>
+            <p>Bæði skammtíma og langtíma markmið auka líkur á að eitthvað verði framkvæmt. Hægt er að styðjast við <a href="https://is.wikipedia.org/wiki/SMART-reglan" target="_blank">SMART markmið</a>. Í lok hvers dags getur verið gott að setja að minnsta kosti eitt einfalt markmið fyrir daginn eftir — t.d.: <em>Á morgun klukkan 16:00 ætla ég að fara með dósirnar í endurvinnslu.</em></p>
+          </div>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Fimm mínútna reglan</h3>
+            <p>Þessa reglu má rekja til sálfræðingsins Christine Padesky. Í hvert skipti sem við nennum ekki að gera eitthvað er gott að muna að við nennum oft ekki að <em>byrja</em> — en ef við náum að byrja er ekkert mál að fylgja verkinu eftir. Þess vegna er gott að segja við sig: <em>"Ég skal gera þetta í 5 mínútur, ef ég hrekk ekki í gírinn má ég hætta án samviskubits."</em></p>
+          </div>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Skipulag</h3>
+            <p>Skipulögð virkni getur verið að skrifa niður stað og stund sem eitthvað fer fram. Þegar við stöndum frammi fyrir verkefni sem virðist óyfirstíganlegt er gott að skrifa niður skrefin og gera eitt í einu. Ef mörg verkefni eru hangandi yfir manni getur hjálpað að flokka þau með <a href="https://www.eisenhower.me/eisenhower-matrix/" target="_blank">Eisenhower boxi</a>.</p>
+          </div>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Grípa og endurmeta hamlandi hugsanir</h3>
+            <p>Bæði <a href="https://beckinstitute.org/get-informed/what-is-cognitive-therapy/" target="_blank">hugræn atferlismeðferð</a> og <a href="https://en.wikipedia.org/wiki/Stoicism" target="_blank">stóuspeki</a> byggja á því að hugsanir okkar stýra viðbrögðum okkar. Hér eru algengar hamlandi hugsanir og endurmat á þeim:</p>
+          </div>
+        </div>
+
+        <table class="thought-table">
+          <tr>
+            <th>Hamlandi hugsun</th>
+            <th>Endurmat</th>
+          </tr>
+          <tr>
+            <td>"Ég nenni þessu ekki"</td>
+            <td>Oft nennum við ekki en þurfum þess. Ímyndaðu þér hversu vel þér mun líða þegar þú ert búinn. Þú getur jafnvel verðlaunað þér fyrir að nenna.</td>
+          </tr>
+          <tr>
+            <td>"Ég er ekki í réttu skapi"</td>
+            <td>Það er ekki til skap fyrir allar athafnir. Skap og áhugi vaknar stundum <strong>eftir</strong> að maður fer í verkið.</td>
+          </tr>
+          <tr>
+            <td>"Ég kann þetta ekki"</td>
+            <td>Það er ekki afsökun til að sleppa því. Getur þú fundið leiðbeiningar eða beðið einhvern um hjálp?</td>
+          </tr>
+          <tr>
+            <td>"Þetta tekur of langan tíma"</td>
+            <td>Þá er gott að skipuleggja sig og brjóta verkið upp í smærri hluta. Byrjaðu á fyrsta hlutanum strax.</td>
+          </tr>
+          <tr>
+            <td>"Þetta er óþarfi"</td>
+            <td>Stundum finnst okkur verk óþörf en þörfin kemur í ljós þegar betur er skoðað — kannski er þörfin fyrir einhvern annan.</td>
+          </tr>
+          <tr>
+            <td>"Þetta er of mikið fyrir mig"</td>
+            <td>Reyndu að fá aðstoð. Eins er gott að spyrja sig gagnrýnið hvort verkið sé raunverulega of mikið.</td>
+          </tr>
+          <tr>
+            <td>"Einhver annar á að gera þetta"</td>
+            <td>Ræddu við viðkomandi. Skoðaðu líka með gagnrýnum hætti hvort þetta sé raunverulega verk einhvers annars.</td>
+          </tr>
+          <tr>
+            <td>"Þetta er tilgangslaust"</td>
+            <td>Skrifaðu niður þá kosti sem fylgja því að klára verkið — oft eru þeir fleiri en gallarnir.</td>
+          </tr>
+          <tr>
+            <td>"Ég ætti að eyða tímanum í eitthvað annað"</td>
+            <td>Stundum er þetta rétt — en þá er mikilvægt að <strong>gera</strong> það "eitthvað annað." Ef þú ert að nota þetta sem afsökun, taktu stökkið og drífðu verkið af.</td>
+          </tr>
+        </table>
+
+        <p>Öll virkni er betri en engin. Sama hvort það er smátt eða stórt — ef við blöndum saman forvitni og elju og framkvæmum stöðugar virknitilraunir mun lífið leiða okkur í ótrúlegustu áttir.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Depression test -->
+  <div class="expandable-card" id="card-test">
+    <div class="expandable-header" onclick="toggleCard('test')">
+      <div class="expandable-header-left">
+        <div class="expandable-icon"><i class="fas fa-clipboard-list"></i></div>
+        <div>
+          <h3>Taktu þunglyndispróf</h3>
+          <p>PHQ próf til að meta einkenni þunglyndis</p>
+        </div>
+      </div>
+      <i class="fas fa-chevron-down chevron"></i>
+    </div>
+    <div class="expandable-body" id="test">
+      <div class="test-container">
+        <iframe src="https://ottarb.shinyapps.io/phqapp/" scrolling="no" title="Þunglyndispróf"></iframe>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Vefsíða þessi er fyrst og fremst gerð til að veita fólki hugmyndir um virkni.</p>
+  <p>Vefsíðan er ekki hugsuð sem sjálfshjálparefni í stað sálfræðiþjónustu — fólki sem grunar slíkan vanda er bent á að hafa samband við heilsugæsluna.</p>
+  <p style="margin-top: 10px;"><a href="http://www.ottar.is">www.ottar.is</a> &nbsp;·&nbsp; ©2024</p>
+</footer>
+
+<script>
+  var activities = [
+    "Lestu bók","Farðu í göngutúr","Skrifaðu í dagbók","Prófaðu nýja uppskrift",
+    "Lærðu tungumál","Horfðu á mynd","Hlustaðu á tónlist","Púslaðu",
+    "Teiknaðu eða litaðu","Dansaðu","Farðu í jóga","Spilaðu borðspil",
+    "Farðu út í náttúruna","Farðu í búð og borðaðu ávöxt sem þú hefur aldrei smakkað",
+    "Farðu á safn eða sýningu","Farðu á tónleika","Taktu ljósmyndir",
+    "Hringdu í einhvern","Far að hjóla","Hjálpaðu einhverjum","Lærðu eitthvað nýtt",
+    "Farðu í bað eða sturtu","Hugleiddu","Taktu til eða þrífðu",
+    "Lagaðu eitthvað sem þarf að laga","Stundaðu kynlíf sé þess kostur",
+    "Rifjaðu upp gömul áhugamál","Perlaðu","Skrifaðu ljóð eða smásögu",
+    "Lestu fræðandi grein á netinu","Leiktu við dýr ef þú getur",
+    "Knúsaðu einhvern ef þú getur","Syngdu!",
+    "Farðu með eitthvað í endurvinnslu sem þú ert hætt/ur að nota",
+    "Bakaðu eitthvað gott","Gerðu eitthvað sem krefst hugrekkis",
+    "Smakkaðu mat sem þú hefur ekki smakkað lengi en þér fannst áður vondur",
+    "Skráðu þig á eitthvað námskeið","Farðu í nudd","Handskrifaðu eitthvað",
+    "Finndu eitthvað fyndið á netinu sem fær þig til að hlæja",
+    "Farðu á skauta eða skíði","Farðu í bíó — já það má fara ein/n",
+    "Taktu nokkrar armbeygjur eða aðra líkamsþyngdaræfingu",
+    "Skrifaðu niður 5 hluti sem þú mátt vera þakklát/ur fyrir",
+    "Klæddu þig í flott föt","Taktu til í tölvunni eða símanum",
+    "Skrifaðu niður lista af óklárðuðum verkum og byrjaðu á því léttasta",
+    "Þrífðu eitthvað sem hefur ekki verið þrifið lengi",
+    "Horfðu á uppáhalds kvikmyndina þína frá því þú varst barn","Farðu í fótabað"
+  ];
+
+  function getActivity() {
+    var container = document.getElementById("activity-container");
+    var random = activities[Math.floor(Math.random() * activities.length)];
+    container.innerHTML = '<p>' + random + '</p>';
   }
-}
+
+  function toggleCard(id) {
+    var card = document.getElementById('card-' + id);
+    card.classList.toggle('open');
+  }
 </script>
 
-<br><br>
 </body>
-<footer>
-	<p>
-	  Vefsíða þessi er fyrst og fremst gerð til að veita fólki hugmyndir um virkni.<br>
-	  Vefsíðan er ekki hugsuð sem sjálfshjálparefni í stað sálfræðiþjónustu og er fólki sem grunar slíkan vanda bent á að hafa samband við t.d. heilsugæsluna sína.
-	  <br> 
-	  <strong><a href="http://www.ottar.is">www.ottar.is</a></strong>
-	  <br>
-	  ©2024
-	<br>
-	</p>
-  </footer>
-  
 </html>
-	
